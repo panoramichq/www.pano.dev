@@ -23,7 +23,7 @@ export default () => (
             data-sal-duration="1000"
           >
             <div className="text-blue-600">Data</div>
-            <div className="text-indigo-600">Modeling</div>
+            <div className="text-indigo-600">Transform</div>
             <div className="text-purple-600">Simplified</div>
           </h1>
           <p
