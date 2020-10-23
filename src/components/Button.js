@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 
 const sizes = {
@@ -6,11 +7,12 @@ const sizes = {
   xl: `py-4 px-10 text-lg`
 };
 
-export default function Button({ children, className = '', size }) {
+export default function Button({ children, to,className = '', size }) {
   return (
-    <button
-      type="button"
-      className={`
+    <Link to={to}>
+      <button
+        type="button"
+        className={`
         ${sizes[size] || sizes.default}
         ${className}
         rounded-full
@@ -19,8 +21,9 @@ export default function Button({ children, className = '', size }) {
         hover:bg-blue-800
         transition duration-200
     `}
-    >
-      {children}
-    </button>
+      >
+        {children}
+      </button>
+    </Link>
   );
 }

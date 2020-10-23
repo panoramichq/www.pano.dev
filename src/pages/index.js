@@ -35,7 +35,9 @@ export default () => (
             Organize, unify, and monitor business-critical data from any data source.
           </p>
           <p className="mt-12" data-sal="slide-up" data-sal-delay="700" data-sal-duration="1000">
-            <Button size="lg">Sign up for free</Button>
+            <Button size="lg" to="/sign-up">
+              Sign up for free
+            </Button>
           </p>
         </div>
         <div
@@ -120,7 +122,9 @@ export default () => (
     <section className="container mx-auto my-20 py-24 bg-gray-100 rounded-lg text-center">
       <h3 className="text-5xl font-semibold">Empower teams to make data-driven decisions.</h3>
       <p className="mt-8">
-        <Button size="xl">Sign up for free</Button>
+        <Button size="xl" to="/sign-up">
+          Sign up for free
+        </Button>
       </p>
     </section>
   </Layout>
