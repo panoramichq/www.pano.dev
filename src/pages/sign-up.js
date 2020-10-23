@@ -5,7 +5,7 @@ export default () => (
   <Layout>
     <section className="pt-14">
       <div className="container mx-auto px-12 lg:flex">
-        <div className="text-center lg:text-left lg:w-6/12 ">
+        <div className="text-center lg:text-left">
           <h1
             className="text-8xl font-semibold leading-none"
             data-sal="fade"
@@ -16,6 +16,24 @@ export default () => (
           </h1>
         </div>
       </div>
+      <section className="container mx-auto my-20 py-24 bg-gray-100 rounded-lg text-center">
+        <form name="signup" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+          <p>
+            <label>
+              Company Name: <input type="text" name="company"></input>
+            </label>
+          </p>
+          <p>
+            <label>
+              Email: <input type="email" name="email"></input>
+            </label>
+          </p>
+          <div data-netlify-recaptcha="true"></div>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+      </section>
     </section>
   </Layout>
 );
