@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `http://panohq.surge.sh`
+    siteUrl: `https://www.pano.dev`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
