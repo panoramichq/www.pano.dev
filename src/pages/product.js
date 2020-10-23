@@ -5,7 +5,7 @@ export default () => (
   <Layout>
     <section className="pt-14">
       <div className="container mx-auto px-12 lg:flex">
-        <div className="text-center lg:text-left lg:w-6/12 ">
+        <div className="text-center lg:text-left">
           <h1
             className="text-8xl font-semibold leading-none"
             data-sal="fade"
