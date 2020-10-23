@@ -20,7 +20,6 @@ export default function Header() {
 
         <div className="lg:w-1/3 flex mt-4 sm:mt-0 space-x-10 justify-center text-center">
           <NavLink href="/">Product</NavLink>
-          <NavLink href="/">Pricing</NavLink>
           <NavLink href="/">Documentation</NavLink>
         </div>
 
