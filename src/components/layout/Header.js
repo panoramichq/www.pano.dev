@@ -20,7 +20,7 @@ export default function Header() {
 
         <div className="lg:w-1/3 flex mt-4 sm:mt-0 space-x-10 justify-center text-center">
           <NavLink href="/">Product</NavLink>
-          <NavLink href="/">Documentation</NavLink>
+          <NavLink href="https://docs.pano.dev/">Documentation</NavLink>
         </div>
 
         <div className="lg:w-1/3 block space-x-4 place-items-end text-right">
