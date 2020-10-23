@@ -1,7 +1,7 @@
 # Pano.dev Netlify config
 
 [build]
-  publish = "build-output/"
+  publish = "public/"
   command = "gatsby build"
   functions = "functions/"
 
