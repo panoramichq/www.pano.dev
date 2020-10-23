@@ -127,5 +127,21 @@ export default () => (
         </Button>
       </p>
     </section>
+
+    <section className="container mx-auto my-20 py-24 bg-gray-100 rounded-lg text-center">
+      <form name="signup" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+          <p>
+              <label>Company Name: <input type="text" name="company"></input></label>
+          </p>
+          <p>
+              <label>Email: <input type="email" name="email"></input></label>
+          </p>
+          <div data-netlify-recaptcha="true"></div>
+          <p>
+              <button type="submit">Send</button>
+          </p>
+      </form>
+    </section>
+
   </Layout>
 );

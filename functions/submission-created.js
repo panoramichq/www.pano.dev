@@ -1,67 +1,90 @@
-const sendThankYouEmail = async ({ email }) => {
-  return new Promise((resolve, reject) => {
-    console.log('Sending the email');
-    const { MG_API_KEY: apiKey, MG_DOMAIN: domain } = process.env;
-    const mailgun = Mailgun({
-      apiKey,
-      domain
-    });
+//const request = require("request");
 
-    const mailData = {
-      from: 'Stefan Judis <no-reply@stefanjudis.com>',
-      to: email,
-      subject: 'Thank you for your interest',
-      text: "I'll come back to you asap!"
+const mailChimpAPI = process.env.MAILCHIMP_API_KEY;
+const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
+const mcRegion = process.env.MAILCHIMP_REGION;
+
+module.exports.handler = (event, context, callback) => {
+
+    const formData = JSON.parse(event.body);
+    const email = formData.email;
+    let errorMessage = null;
+
+    if (!formData) {
+        errorMessage = "No form data supplied";
+        console.log(errorMessage);
+        callback(errorMessage);
+    }
+
+    if (!email) {
+        errorMessage = "No EMAIL supplied";
+        console.log(errorMessage);
+        callback(errorMessage);
+    }
+
+    if (!mailChimpListID) {
+        errorMessage = "No LIST_ID supplied";
+        console.log(errorMessage);
+        callback(errorMessage);
+    }
+
+    const data = {
+        email_address: email,
+        status: "subscribed",
+        merge_fields: {}
     };
 
-    mailgun.messages().send(mailData, err => {
-      if (err) return reject(err);
+    const subscriber = JSON.stringify(data);
+    console.log("Sending data to mailchimp", subscriber);
 
-      resolve();
+    callback(null, {
+        statusCode: 201,
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials": "true"
+        },
+        body: JSON.stringify({
+            status: "saved email"
+        })
+    })
+    return;
+
+    request({
+        method: "POST",
+        url: `https://${mcRegion}.api.mailchimp.com/3.0/lists/${mailChimpListID}/members`,
+        body: subscriber,
+        headers: {
+            "Authorization": `apikey ${mailChimpAPI}`,
+            "Content-Type": "application/json"
+        }
+    }, (error, response, body) => {
+        if (error) {
+            callback(error, null)
+        }
+        const bodyObj = JSON.parse(body);
+
+        console.log("Mailchimp body: " + JSON.stringify(bodyObj));
+        console.log("Status Code: " + response.statusCode);
+
+        if (response.statusCode < 300 || (bodyObj.status === 400 && bodyObj.title === "Member Exists")) {
+            console.log("Added to list in Mailchimp subscriber list");
+            callback(null, {
+                statusCode: 201,
+                headers: {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Credentials": "true"
+                },
+                body: JSON.stringify({
+                    status: "saved email"
+                })
+            })
+        } else {
+            console.log("Error from mailchimp", bodyObj.detail);
+            callback(bodyObj.detail, null);
+        }
+
     });
-  });
-};
-
-const saveUser = async ({ name, email, message }) => {
-  return new Promise((resolve, reject) => {
-    const { AT_API_KEY: apiKey, AT_BASE, AT_TABLE } = process.env;
-
-    Airtable.configure({
-      apiKey
-    });
-
-    const base = Airtable.base(AT_BASE);
-    base(AT_TABLE).create({ name, email, message }, err => {
-      if (err) return reject(err);
-
-      resolve();
-    });
-  });
-};
-
-exports.handler = async event => {
-  try {
-    const data = JSON.parse(event.body);
-    console.log(event);
-    console.log(data);
-
-    // await sendThankYouEmail(data);
-
-    // if (data.receiveUpdates) {
-    //   await saveUser(data);
-    // }
-
-    return {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: "Let's become serverless conductors!!!"
-      })
-    };
-  } catch (e) {
-    console.log(e);
-    return {
-      statusCode: 500,
-      body: e.mssage
-    };
-  }
+    
 };

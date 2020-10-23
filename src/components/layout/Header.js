@@ -19,7 +19,7 @@ export default function Header() {
           </Link>
           <a
             className="hover:text-black text-gray-600 transition duration-200"
-            href="https://documentation.pano.dev"
+            href="https://docs.pano.dev/"
           >
             Documentation
           </a>
