@@ -7,6 +7,7 @@ module.exports = {
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-recaptcha`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

@@ -10,6 +10,7 @@ import BlumhouseLogo from '../img/blumhouse.png';
 import ChaChaLogo from '../img/cha_cha_matcha.png';
 import RepresentLogo from '../img/represent.png';
 import SonyLogo from '../img/sony_pictures.png';
+import Recaptcha from 'react-recaptcha';
 
 export default () => (
   <Layout>
@@ -132,7 +133,9 @@ export default () => (
           <p>
               <label>Email: <input type="email" name="email"></input></label>
           </p>
-          <div data-netlify-recaptcha="true"></div>
+          <p>
+            <Recaptcha sitekey="6LdczNoZAAAAACSNZqMZlY_FOGnICkE7_Aa_vDBd" badge="inline" />
+           </p>
           <p>
               <button type="submit">Send</button>
           </p>
