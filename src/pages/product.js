@@ -12,16 +12,8 @@ export default () => (
             data-sal-delay="100"
             data-sal-duration="1000"
           >
-            <div className="text-purple-400">Oh no, page not found!</div>
+            <div className="text-teal-400">Product</div>
           </h1>
-          <p
-            className="text-xl lg:text-2xl mt-6 font-ligh"
-            data-sal="slide-up"
-            data-sal-delay="400"
-            data-sal-duration="1000"
-          >
-            Error 404
-          </p>
         </div>
       </div>
     </section>

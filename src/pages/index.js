@@ -10,7 +10,6 @@ import BlumhouseLogo from '../img/blumhouse.png';
 import ChaChaLogo from '../img/cha_cha_matcha.png';
 import RepresentLogo from '../img/represent.png';
 import SonyLogo from '../img/sony_pictures.png';
-import Recaptcha from 'react-recaptcha';
 
 export default () => (
   <Layout>
@@ -36,7 +35,9 @@ export default () => (
             Organize, unify, and monitor business-critical data from any data source.
           </p>
           <p className="mt-12" data-sal="slide-up" data-sal-delay="700" data-sal-duration="1000">
-            <Button size="lg">Sign up for free</Button>
+            <Button size="lg" to="/sign-up">
+              Sign up for free
+            </Button>
           </p>
         </div>
         <div
@@ -121,26 +122,10 @@ export default () => (
     <section className="container mx-auto my-20 py-24 bg-gray-100 rounded-lg text-center">
       <h3 className="text-5xl font-semibold">Empower teams to make data-driven decisions.</h3>
       <p className="mt-8">
-        <Button size="xl">Sign up for free</Button>
+        <Button size="xl" to="/sign-up">
+          Sign up for free
+        </Button>
       </p>
     </section>
-
-    <section className="container mx-auto my-20 py-24 bg-gray-100 rounded-lg text-center">
-      <form name="signup" method="POST" data-netlify-recaptcha="true" data-netlify="true">
-          <p>
-              <label>Company Name: <input type="text" name="company"></input></label>
-          </p>
-          <p>
-              <label>Email: <input type="email" name="email"></input></label>
-          </p>
-          <p>
-            <Recaptcha sitekey="6LdczNoZAAAAACSNZqMZlY_FOGnICkE7_Aa_vDBd" badge="inline" />
-           </p>
-          <p>
-              <button type="submit">Send</button>
-          </p>
-      </form>
-    </section>
-
   </Layout>
 );
