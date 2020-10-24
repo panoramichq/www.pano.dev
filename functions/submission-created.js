@@ -6,8 +6,10 @@ const mcRegion = process.env.MAILCHIMP_REGION;
 
 module.exports.handler = (event, context, callback) => {
 
-    const formData = JSON.parse(event.body);
+    const rawData = JSON.parse(event.body);
+    const formData = rawData.payload;
     const email = formData.email;
+    console.log(formData);
     let errorMessage = null;
 
     if (!formData) {
@@ -22,11 +24,11 @@ module.exports.handler = (event, context, callback) => {
         callback(errorMessage);
     }
 
-    if (!mailChimpListID) {
-        errorMessage = "No LIST_ID supplied";
-        console.log(errorMessage);
-        callback(errorMessage);
-    }
+    // if (!mailChimpListID) {
+    //     errorMessage = "No LIST_ID supplied";
+    //     console.log(errorMessage);
+    //     callback(errorMessage);
+    // }
 
     const data = {
         email_address: email,

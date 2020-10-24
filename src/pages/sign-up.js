@@ -19,6 +19,7 @@ export default () => (
       </div>
       <section className="container mx-auto my-20 py-24 bg-gray-100 rounded-lg text-center">
         <form name="signup" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+          <input type="hidden" name="form-name" value="signup" />
           <p>
             <label>
               Company Name: <input type="text" name="company"></input>
