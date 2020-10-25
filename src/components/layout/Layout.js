@@ -3,15 +3,12 @@ import Footer from './Footer';
 import Header from './Header';
 import { Helmet } from 'react-helmet';
 
-export default function Layout({ children, title = 'Pano' }) {
+export default function Layout({ children, title = 'Pano.dev' }) {
   return (
     <>
       <Helmet>
         <title>{title}</title>
-        <meta
-          name="description"
-          content="Data modeling simplified"
-        />
+        <meta name="description" content="Data transforamtion simplified" />
       </Helmet>
       <Header />
       <main>{children}</main>

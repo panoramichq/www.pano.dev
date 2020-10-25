@@ -8,8 +8,7 @@ export default function ButtonLink({ children, href, className = '' }) {
         ${className}
         text-blue-600 
         hover:text-blue-800
-        font-medium 
-        text-lg
+        
         transition
         duration-200
     `}

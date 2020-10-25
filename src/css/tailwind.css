@@ -1,6 +1,17 @@
 @tailwind base;
 
+h1 {
+  @apply text-8xl font-medium leading-none;
+}
+
+a {
+  @apply hover:text-black text-gray-600 transition duration-200;
+}
+
+.box {
+  @apply mx-14 p-14 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded-2xl;
+}
+
 @tailwind components;
 
 @tailwind utilities;
-

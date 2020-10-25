@@ -5,7 +5,6 @@ import Layout from '../components/layout/Layout';
 import SplitSection from '../components/SplitSection';
 import ButtonLink from '../components/ButtonLink';
 import SweetgreenLogo from '../img/sweetgreen.png';
-import back from '../img/animate3.svg';
 import BlumhouseLogo from '../img/blumhouse.png';
 import ChaChaLogo from '../img/cha_cha_matcha.png';
 import RepresentLogo from '../img/represent.png';
@@ -13,43 +12,36 @@ import SonyLogo from '../img/sony_pictures.png';
 
 export default () => (
   <Layout>
-    <section className="pt-14">
-      <div className="container mx-auto px-12 lg:flex">
-        <div className="text-center lg:text-left lg:w-6/12 ">
-          <h1
-            className="text-8xl font-semibold leading-none"
-            data-sal="fade"
-            data-sal-delay="100"
-            data-sal-duration="1000"
-          >
-            <div className="text-blue-600">Data</div>
-            <div className="text-indigo-600">Transform</div>
-            <div className="text-purple-600">Simplified</div>
-          </h1>
-          <p
-            className="text-xl lg:text-2xl mt-6 font-ligh"
-            data-sal="slide-up"
-            data-sal-delay="400"
-            data-sal-duration="1000"
-          >
-            Organize, unify, and monitor business-critical data from any data source.
-          </p>
-          <p className="mt-12" data-sal="slide-up" data-sal-delay="700" data-sal-duration="1000">
-            <Button size="lg" to="/sign-up">
-              Sign up for free
-            </Button>
-          </p>
-        </div>
-        <div
-          className="lg:w-6/12 flex justify-end items-center"
+    <div className="mx-14 p-14 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
+      <div className="container text-center lg:text-left lg:w-7/12 ">
+        <h1
+          className="text-8xl font-semibold leading-none"
           data-sal="fade"
-          data-sal-delay="700"
+          data-sal-delay="200"
           data-sal-duration="1000"
         >
-          <img src={back} alt="back" class="w-full" />
-        </div>
+          <div className="text-blue-600">Data</div>
+          <div className="text-indigo-600">Transformation</div>
+          <div className="text-purple-600">Simplified</div>
+        </h1>
+        <p
+          className="text-2xl mt-10 font-ligh"
+          data-sal="fade"
+          data-sal-delay="300"
+          data-sal-duration="1000"
+        >
+          Easy-to-use, low-code platform that allows you to quickly map and transform your data into
+          meaningful insights
+        </p>
+        <p className="mt-12 mb-2 space-x-6" data-sal="fade" data-sal-delay="500" data-sal-duration="1000">
+          <Button size="lg" to="/sign-up">
+            Sign up for free
+          </Button>
+          <ButtonLink href="#">Learn more →</ButtonLink>
+        </p>
       </div>
-    </section>
+    </div>
+
     <section id="clients" className="mt-24">
       <LabelText className="mb-10 text-gray-600 text-center">Trusted by great companies</LabelText>
       <div className="container mx-auto px-8 lg:flex justify-between items-center opacity-75">
@@ -63,10 +55,11 @@ export default () => (
     <section id="features" className="py-20 lg:pb-20 lg:pt-56">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-4xl font-medium ">
-          Don’t let valuable insights get lost in the backlog
+          Bridge the gaps within your marketing stack
         </h2>
         <p className="text-xl lg:text-2xl mt-3 font-light">
-          With no-code modeling and a simple, modern interface all teams can now be data masters.
+          Seamlessly integrates between your data warehouse and favorite B.I. tool to map,
+          transform, and monitor your data.
         </p>
       </div>
     </section>

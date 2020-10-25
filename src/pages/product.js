@@ -3,19 +3,10 @@ import Layout from '../components/layout/Layout';
 
 export default () => (
   <Layout>
-    <section className="pt-14">
-      <div className="container mx-auto px-12 lg:flex">
-        <div className="text-center lg:text-left">
-          <h1
-            className="text-8xl font-semibold leading-none"
-            data-sal="fade"
-            data-sal-delay="100"
-            data-sal-duration="1000"
-          >
-            <div className="text-teal-400">Product</div>
-          </h1>
-        </div>
-      </div>
-    </section>
+    <div className="container mx-auto px-12 flex text-left pt-14">
+      <h1 className="text-teal-400" data-sal="fade">
+        Product
+      </h1>
+    </div>
   </Layout>
 );
