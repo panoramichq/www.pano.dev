@@ -33,12 +33,17 @@ export default () => (
           Easy-to-use, low-code platform that allows you to quickly map and transform your data into
           meaningful insights
         </p>
-        <p className="mt-12 mb-2 space-x-6" data-sal="fade" data-sal-delay="500" data-sal-duration="1000">
+        <div
+          className="mt-12 mb-2 space-x-6"
+          data-sal="fade"
+          data-sal-delay="500"
+          data-sal-duration="1000"
+        >
           <Button size="lg" to="/sign-up">
             Sign up for free
           </Button>
           <ButtonLink href="#">Learn more →</ButtonLink>
-        </p>
+        </div>
       </div>
     </div>
 

@@ -4,33 +4,65 @@ import Recaptcha from 'react-recaptcha';
 
 export default () => (
   <Layout>
-    <div className="container mx-auto px-12 lg:flex pt-14">
-      <div className="text-center lg:text-left">
-        <h1 className="text-yellow-400" data-sal="fade">
-          Sign up
+    <div className="mx-14 p-14 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
+      <div className="container text-center lg:text-left lg:w-7/12 ">
+        <h1
+          className="text-8xl font-semibold leading-none"
+          data-sal="fade"
+          data-sal-delay="200"
+          data-sal-duration="1000"
+        >
+          <div className="text-blue-600">Sign up</div>
         </h1>
+        <p
+          className="text-2xl mt-10 font-ligh"
+          data-sal="fade"
+          data-sal-delay="300"
+          data-sal-duration="1000"
+        >
+          Easy-to-use, low-code platform that allows you to quickly map and transform your data into
+          meaningful insights
+        </p>
+
+        <form
+          name="signup"
+          method="POST"
+          data-netlify-recaptcha="true"
+          data-netlify="true"
+          className="mt-10"
+        >
+          <input type="hidden" name="form-name" value="signup" />
+
+          <label>
+            <span>Company name</span>
+            <input
+              type="text"
+              name="company"
+              className="border rounded block w-1/2 py-2 px-3 leading-tight mb-5"
+            ></input>
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              className="border rounded block w-1/2 py-2 px-3 leading-tight mb-5"
+            ></input>
+          </label>
+
+          <div data-netlify-recaptcha="true" className="mb-5">
+            <Recaptcha sitekey="6LdczNoZAAAAACSNZqMZlY_FOGnICkE7_Aa_vDBd" badge="inline" />
+          </div>
+
+          <button
+            className="py-2 px-4 rounded-full text-white bg-blue-600 hover:bg-blue-800 transition duration-200"
+            type="submit"
+          >
+            Sign up for free
+          </button>
+        </form>
       </div>
     </div>
-    <section className="container mx-auto my-20 py-24 bg-gray-100 rounded-lg text-center">
-      <form name="signup" method="POST" data-netlify-recaptcha="true" data-netlify="true">
-        <input type="hidden" name="form-name" value="signup" />
-        <p>
-          <label>
-            Company Name: <input type="text" name="company"></input>
-          </label>
-        </p>
-        <p>
-          <label>
-            Email: <input type="email" name="email"></input>
-          </label>
-        </p>
-        <div data-netlify-recaptcha="true">
-          <Recaptcha sitekey="6LdczNoZAAAAACSNZqMZlY_FOGnICkE7_Aa_vDBd" badge="inline" />
-        </div>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
-    </section>
   </Layout>
 );

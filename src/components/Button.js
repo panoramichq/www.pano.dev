@@ -7,7 +7,7 @@ const sizes = {
   xl: `py-4 px-10 text-lg`
 };
 
-export default function Button({ children, to,className = '', size }) {
+export default function Button({ children, to, className = '', size }) {
   return (
     <Link to={to}>
       <button
