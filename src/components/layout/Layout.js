@@ -3,7 +3,7 @@ import Footer from './Footer';
 import Header from './Header';
 import { Helmet } from 'react-helmet';
 
-export default function Layout({ children, title = 'Pano.dev' }) {
+export default function Layout({ children, title = 'Pano' }) {
   return (
     <>
       <Helmet>
