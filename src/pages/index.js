@@ -32,8 +32,8 @@ export default () => (
           data-sal-delay="300"
           data-sal-duration="1000"
         >
-          Easy-to-use, low-code platform that allows you to quickly map and transform your data into
-          meaningful insights
+          Bridge the gap between raw data and valuable insights. The easy-to-use platform allows you
+          to quickly map and transform data to fit your requirements.
         </p>
         <div
           className="mt-12 mb-2 space-x-6"
@@ -42,7 +42,7 @@ export default () => (
           data-sal-duration="1000"
         >
           <Button size="lg" to="/sign-up">
-            Sign up for free
+            Sign Up Now. Free Forever
           </Button>
           <ButtonLink href="#">Learn more →</ButtonLink>
         </div>
@@ -66,8 +66,7 @@ export default () => (
           Bridge the gaps within your marketing stack
         </h2>
         <p className="text-xl lg:text-2xl mt-3 font-light">
-          Seamlessly integrates between your data warehouse and favorite B.I. tool to map,
-          transform, and monitor your data.
+          With no-code modeling and a simple, modern interface, all teams can now be data masters.
         </p>
       </div>
     </section>
@@ -76,10 +75,10 @@ export default () => (
       id="services"
       primarySlot={
         <div className="lg:pr-24">
-          <h3 className="text-3xl font-semibold leading-tight">Connect your data sources</h3>
+          <h3 className="text-3xl font-semibold leading-tight">Prepare your Data</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            Already have the data, connect your data warehouse. Need help getting the data, connect
-            one of our managed API pipelines
+            Fix naming issues, apply custom groupings, remove duplicate records and clean your data
+            so its ready for analysis.
           </p>
           <p className="mt-8">
             <ButtonLink href="#">Learn more →</ButtonLink>
@@ -92,11 +91,10 @@ export default () => (
       reverseOrder
       primarySlot={
         <div className="lg:pl-24">
-          <h3 className="text-3xl font-semibold leading-tight">Unified transformation layer</h3>
+          <h3 className="text-3xl font-semibold leading-tight">Customize your Model</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            Will Let you inspect all of the data you connect and build useful, marketing specific
-            models to speed up your analysis. <br />
-            Have something totally custom, dive in deep and configure your own custom models
+            Organize reports from all your partners into one unified data glossary to keep everyone
+            in your company aligned.
           </p>
           <p className="mt-8">
             <ButtonLink href="#">Learn more →</ButtonLink>
@@ -108,11 +106,10 @@ export default () => (
     <SplitSection
       primarySlot={
         <div className="lg:pr-24">
-          <h3 className="text-3xl font-semibold leading-tight">Personalized Workspaces</h3>
+          <h3 className="text-3xl font-semibold leading-tight">Share your Insights</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            Invite teams and let them start safely customizing their views, tell us what they care
-            about and let the system push insights to you, freeing up more time to focus on the
-            business
+            Invite teams to build their own reports with accurate metrics, contextual benchmarks and
+            automated performance monitoring.
           </p>
           <p className="mt-8">
             <ButtonLink href="#">Learn more →</ButtonLink>
@@ -125,7 +122,7 @@ export default () => (
       <h3 className="text-5xl font-semibold">Empower teams to make data-driven decisions.</h3>
       <p className="mt-8">
         <Button size="xl" to="/sign-up">
-          Sign up for free
+          Sign Up Now. Free Forever
         </Button>
       </p>
     </section>

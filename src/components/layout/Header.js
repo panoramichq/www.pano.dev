@@ -24,8 +24,8 @@ export default function Header() {
         </nav>
 
         <div className="lg:w-1/3 block space-x-8 place-items-end text-right">
-          <a href="https://platform.panoramichq.com">Log in</a>
-          <Button to="/sign-up">Sign up for free</Button>
+          <a href="https://platform.panoramichq.com">Log In</a>
+          <Button to="/sign-up">Sign Up Now. Free Forever</Button>
         </div>
       </div>
     </header>

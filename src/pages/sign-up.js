@@ -12,7 +12,8 @@ export default () => (
           data-sal-delay="200"
           data-sal-duration="1000"
         >
-          <div className="text-blue-600">Sign up</div>
+          <div className="text-blue-600">Sign Up Now.</div>
+          <div className="text-indigo-600">Free Forever</div>
         </h1>
         <p
           className="text-2xl mt-10 font-ligh"
@@ -20,8 +21,8 @@ export default () => (
           data-sal-delay="300"
           data-sal-duration="1000"
         >
-          Easy-to-use, low-code platform that allows you to quickly map and transform your data into
-          meaningful insights
+          Ready to start with the easy-to-use platform to quickly map and transform data
+          to fit your requirements?
         </p>
 
         <form
