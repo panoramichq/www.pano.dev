@@ -3,6 +3,7 @@ const AWS = require('aws-sdk');
 const snsAccessKey = process.env.SNS_ACCESS_KEY_ID;
 const snsAccessSecret = process.env.SNS_SECRET_ACCESS_KEY;
 const snsTopic = process.env.SNS_TOPIC_ARN;
+const snsRegion = process.env.SNS_REGION;
 
 module.exports.handler = (event, context, callback) => {
 
@@ -42,7 +43,7 @@ module.exports.handler = (event, context, callback) => {
     console.log("Sending data to SNS", subscriber);
 
     // Setup AWS SNS connection
-    const sns = new AWS.SNS({apiVersion: '2010-03-31', accessKeyId: snsAccessKey, secretAccessKey: snsAccessSecret});
+    const sns = new AWS.SNS({apiVersion: '2010-03-31', accessKeyId: snsAccessKey, secretAccessKey: snsAccessSecret, region: snsRegion});
 
     sns.publish({
         Message: subscriber,
