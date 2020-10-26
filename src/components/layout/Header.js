@@ -12,7 +12,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="lg:w-1/3 flex mt-4 sm:mt-0 space-x-10 justify-center text-center">
+        <nav className="lg:w-1/3 flex mt-4 sm:mt-0 space-x-10 justify-center text-center">
           {/* 
          <Link activeClassName="text-black" to="/product">
             Product
@@ -21,7 +21,7 @@ export default function Header() {
           <a href="https://docs.pano.dev/" target="_blank" rel="noopener noreferrer">
             Documentation
           </a>
-        </div>
+        </nav>
 
         <div className="lg:w-1/3 block space-x-8 place-items-end text-right">
           <a href="https://platform.panoramichq.com">Log in</a>

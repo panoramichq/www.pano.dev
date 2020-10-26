@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../components/Button';
-import LabelText from '../components/LabelText';
 import Layout from '../components/layout/Layout';
 import SplitSection from '../components/SplitSection';
 import ButtonLink from '../components/ButtonLink';
@@ -12,7 +11,10 @@ import SonyLogo from '../img/sony_pictures.png';
 
 export default () => (
   <Layout>
-    <div className="mx-14 p-14 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
+    <section
+      id="hero"
+      className="mx-14 p-14 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded"
+    >
       <div className="container text-center lg:text-left lg:w-7/12 ">
         <h1
           className="text-8xl font-semibold leading-none"
@@ -45,10 +47,10 @@ export default () => (
           <ButtonLink href="#">Learn more →</ButtonLink>
         </div>
       </div>
-    </div>
+    </section>
 
     <section id="clients" className="mt-24">
-      <LabelText className="mb-10 text-gray-600 text-center">Trusted by great companies</LabelText>
+      <h2 className="tracking-wider mb-10 text-gray-600 text-center">Trusted by great companies</h2>
       <div className="container mx-auto px-8 lg:flex justify-between items-center opacity-75">
         <img src={SweetgreenLogo} alt="Sweetgreen" class="w-40 h-full" />
         <img src={ChaChaLogo} alt="Cha Cha Matcha" class="w-40 h-full" />
@@ -57,6 +59,7 @@ export default () => (
         <img src={RepresentLogo} alt="Represent" class="w-40 h-full" />
       </div>
     </section>
+
     <section id="features" className="py-20 lg:pb-20 lg:pt-56">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-4xl font-medium ">
@@ -68,6 +71,7 @@ export default () => (
         </p>
       </div>
     </section>
+
     <SplitSection
       id="services"
       primarySlot={
