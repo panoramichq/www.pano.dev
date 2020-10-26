@@ -1,14 +1,16 @@
-//const request = require("request");
+const AWS = require('aws-sdk');
 
-const mailChimpAPI = process.env.MAILCHIMP_API_KEY;
-const mailChimpListID = process.env.MAILCHIMP_LIST_ID;
-const mcRegion = process.env.MAILCHIMP_REGION;
+const snsAccessKey = process.env.SNS_ACCESS_KEY_ID;
+const snsAccessSecret = process.env.SNS_SECRET_ACCESS_KEY;
+const snsTopic = process.env.SNS_TOPIC_ARN;
 
 module.exports.handler = (event, context, callback) => {
 
     const rawData = JSON.parse(event.body);
     const formData = rawData.payload;
     const email = formData.email;
+    const company = formData.company;
+    const ip = formData.data.ip;
     console.log(formData);
     let errorMessage = null;
 
@@ -19,58 +21,39 @@ module.exports.handler = (event, context, callback) => {
     }
 
     if (!email) {
-        errorMessage = "No EMAIL supplied";
+        errorMessage = "No email supplied";
         console.log(errorMessage);
         callback(errorMessage);
     }
 
-    // if (!mailChimpListID) {
-    //     errorMessage = "No LIST_ID supplied";
-    //     console.log(errorMessage);
-    //     callback(errorMessage);
-    // }
+    if (!company) {
+        errorMessage = "No company supplied";
+        console.log(errorMessage);
+        callback(errorMessage);
+    }
 
     const data = {
-        email_address: email,
-        status: "subscribed",
-        merge_fields: {}
+        email: email,
+        company: company,
+        ip: ip
     };
 
     const subscriber = JSON.stringify(data);
-    console.log("Sending data to mailchimp", subscriber);
+    console.log("Sending data to SNS", subscriber);
 
-    callback(null, {
-        statusCode: 201,
-        headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Credentials": "true"
-        },
-        body: JSON.stringify({
-            status: "saved email"
-        })
-    })
-    return;
+    // Setup AWS SNS connection
+    const sns = new AWS.SNS({apiVersion: '2010-03-31', accessKeyId: snsAccessKey, secretAccessKey: snsAccessSecret});
 
-    request({
-        method: "POST",
-        url: `https://${mcRegion}.api.mailchimp.com/3.0/lists/${mailChimpListID}/members`,
-        body: subscriber,
-        headers: {
-            "Authorization": `apikey ${mailChimpAPI}`,
-            "Content-Type": "application/json"
-        }
-    }, (error, response, body) => {
-        if (error) {
-            callback(error, null)
-        }
-        const bodyObj = JSON.parse(body);
-
-        console.log("Mailchimp body: " + JSON.stringify(bodyObj));
-        console.log("Status Code: " + response.statusCode);
-
-        if (response.statusCode < 300 || (bodyObj.status === 400 && bodyObj.title === "Member Exists")) {
-            console.log("Added to list in Mailchimp subscriber list");
+    sns.publish({
+        Message: subscriber,
+        TopicArn: snsTopic
+    }, (err, data) => {
+        if (err) {
+            console.log("Error from SNS", err);
+            callback(err, null);
+        } else {
+            console.log("Added to SNS");
+            console.log(data);
             callback(null, {
                 statusCode: 201,
                 headers: {
@@ -79,14 +62,9 @@ module.exports.handler = (event, context, callback) => {
                     "Access-Control-Allow-Credentials": "true"
                 },
                 body: JSON.stringify({
-                    status: "saved email"
+                    status: "Signup processed"
                 })
             })
-        } else {
-            console.log("Error from mailchimp", bodyObj.detail);
-            callback(bodyObj.detail, null);
         }
-
-    });
-    
+    });    
 };
