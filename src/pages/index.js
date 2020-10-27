@@ -13,7 +13,7 @@ export default () => (
   <Layout>
     <section
       id="hero"
-      className="mx-14 p-14 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded"
+      className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded"
     >
       <div className="container text-center lg:text-left lg:w-7/12 ">
         <h1
