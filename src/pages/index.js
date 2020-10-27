@@ -50,13 +50,7 @@ export default () => (
       </div>
     </section>
 
-    <section
-      id="clients"
-      className="my-40"
-      data-sal="fade"
-      data-sal-delay="100"
-      data-sal-duration="800"
-    >
+    <section id="clients" className="my-40">
       <h2 className="tracking-wider mb-10 text-gray-600 text-center">Trusted by great companies</h2>
       <div className="container mx-auto px-8 lg:flex justify-between items-center opacity-75">
         <img src={SweetgreenLogo} alt="Sweetgreen" class="w-40 h-full" />
