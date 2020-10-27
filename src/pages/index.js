@@ -122,13 +122,11 @@ export default () => (
       }
       secondarySlot={<div className="w-96 h-96 bg-pink-300 rounded-3xl"></div>}
     />
-    <section className="container mx-auto my-20 py-24 bg-gradient-to-br from-gray-50 to-gray-200  rounded-lg text-center">
+    <section className="container mx-auto my-10 py-20 bg-gradient-to-br from-gray-50 to-gray-200  rounded-lg text-center">
       <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
-      <p className="mt-8">
-        <Button size="xl" to="/sign-up">
-          Start exploring your data instantly
-        </Button>
-      </p>
+      <Button size="xl" to="/sign-up" className="mt-10">
+        Start exploring your data instantly
+      </Button>
     </section>
   </Layout>
 );
