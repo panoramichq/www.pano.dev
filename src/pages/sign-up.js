@@ -12,17 +12,15 @@ export default () => (
           data-sal-delay="200"
           data-sal-duration="1000"
         >
-          <div className="text-blue-600">Sign Up Now.</div>
-          <div className="text-indigo-600">Free Forever</div>
+          <div className="text-blue-600">Sign Up</div>
         </h1>
         <p
-          className="text-2xl mt-10 font-ligh"
+          className="text-xl mt-10 font-ligh"
           data-sal="fade"
           data-sal-delay="300"
           data-sal-duration="1000"
         >
-          Ready to start with the easy-to-use platform to quickly map and transform data
-          to fit your requirements?
+          Get instant access and modernize your data stack!
         </p>
 
         <form

@@ -12,6 +12,8 @@ export default function ButtonLink({ children, href, className = '' }) {
         duration-200
     `}
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       {children}
     </Link>

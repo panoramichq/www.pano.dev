@@ -8,7 +8,7 @@ export default function Header() {
       <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-3 px-8 font-medium">
         <div className="lg:w-1/3">
           <Link className="text-2xl" activeClassName="text-black" to="/">
-            pano<span className="text-blue-500">.</span>dev
+            pano.dev
           </Link>
         </div>
 
@@ -18,14 +18,14 @@ export default function Header() {
             Product
           </Link>
           */}
-          <a href="https://docs.pano.dev/" target="_blank" rel="noopener noreferrer">
+          <Link href="https://docs.pano.dev/" target="_blank" rel="noopener noreferrer">
             Documentation
-          </a>
+          </Link>
         </nav>
 
         <div className="lg:w-1/3 block space-x-8 place-items-end text-right">
-          <a href="https://platform.panoramichq.com">Log In</a>
-          <Button to="/sign-up">Sign Up Now. Free Forever</Button>
+          <a href="https://platform.panoramichq.com">Log in</a>
+          <Button to="/sign-up">Sign up for free</Button>
         </div>
       </div>
     </header>

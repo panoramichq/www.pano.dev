@@ -17,7 +17,7 @@ export default () => (
     >
       <div className="container text-center lg:text-left lg:w-7/12 ">
         <h1
-          className="text-8xl font-semibold leading-none"
+          className="text-7xl font-semibold leading-none"
           data-sal="fade"
           data-sal-delay="200"
           data-sal-duration="1000"
@@ -27,7 +27,7 @@ export default () => (
           <div className="text-purple-600">Simplified</div>
         </h1>
         <p
-          className="text-2xl mt-10 font-ligh"
+          className="text-xl mt-10 font-ligh"
           data-sal="fade"
           data-sal-delay="300"
           data-sal-duration="1000"
@@ -42,9 +42,9 @@ export default () => (
           data-sal-duration="1000"
         >
           <Button size="lg" to="/sign-up">
-            Sign Up Now. Free Forever
+            Sign up for free
           </Button>
-          <ButtonLink href="#">Learn more →</ButtonLink>
+          <ButtonLink href="https://docs.pano.dev/">Learn more →</ButtonLink>
         </div>
       </div>
     </section>
@@ -62,10 +62,8 @@ export default () => (
 
     <section id="features" className="py-20 lg:pb-20 lg:pt-56">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-4xl font-medium ">
-          Bridge the gaps within your marketing stack
-        </h2>
-        <p className="text-xl lg:text-2xl mt-3 font-light">
+        <h2 className="text-4xl font-medium ">Bridge the gaps within your marketing stack</h2>
+        <p className="text-2xl mt-3 font-light">
           With no-code modeling and a simple, modern interface, all teams can now be data masters.
         </p>
       </div>
@@ -81,7 +79,9 @@ export default () => (
             so its ready for analysis.
           </p>
           <p className="mt-8">
-            <ButtonLink href="#">Learn more →</ButtonLink>
+            <ButtonLink href="https://docs.pano.dev/data-preparation/overview">
+              Learn more →
+            </ButtonLink>
           </p>
         </div>
       }
@@ -97,7 +97,9 @@ export default () => (
             in your company aligned.
           </p>
           <p className="mt-8">
-            <ButtonLink href="#">Learn more →</ButtonLink>
+            <ButtonLink href="https://docs.pano.dev/data-definition/untitled">
+              Learn more →
+            </ButtonLink>
           </p>
         </div>
       }
@@ -112,17 +114,19 @@ export default () => (
             automated performance monitoring.
           </p>
           <p className="mt-8">
-            <ButtonLink href="#">Learn more →</ButtonLink>
+            <ButtonLink href="https://docs.pano.dev/getting-started/creating-workspaces">
+              Learn more →
+            </ButtonLink>
           </p>
         </div>
       }
       secondarySlot={<div className="w-96 h-96 bg-pink-300 rounded-3xl"></div>}
     />
-    <section className="container mx-auto my-20 py-24 bg-gray-100 rounded-lg text-center">
-      <h3 className="text-5xl font-semibold">Empower teams to make data-driven decisions.</h3>
+    <section className="container mx-auto my-20 py-24 bg-gradient-to-br from-gray-50 to-gray-200  rounded-lg text-center">
+      <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
       <p className="mt-8">
         <Button size="xl" to="/sign-up">
-          Sign Up Now. Free Forever
+          Start exploring your data instantly
         </Button>
       </p>
     </section>
