@@ -20,7 +20,7 @@ export default () => (
           data-sal-delay="300"
           data-sal-duration="1000"
         >
-          Become a data master and modernize your data stack
+          Modernize your data stack and become a data master.
         </p>
 
         <form
