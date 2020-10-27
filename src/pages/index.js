@@ -46,7 +46,13 @@ export default () => (
       </div>
     </section>
 
-    <section id="clients" className="my-40">
+    <section
+      id="clients"
+      className="my-40"
+      data-sal="fade"
+      data-sal-delay="100"
+      data-sal-duration="800"
+    >
       <h2 className="tracking-wider mb-10 text-gray-600 text-center">Trusted by great companies</h2>
       <div className="container mx-auto px-8 lg:flex justify-between items-center opacity-75">
         <img src={SweetgreenLogo} alt="Sweetgreen" class="w-40 h-full" />
@@ -59,8 +65,20 @@ export default () => (
 
     <section className="mx-14 my-40 py-40 bg-gray-100 rounded-lg text-center">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-medium ">Bridge the gaps within your marketing stack</h2>
-        <p className="text-2xl mt-3 font-light">
+        <h2
+          className="text-4xl font-medium"
+          data-sal="fade"
+          data-sal-delay="100"
+          data-sal-duration="800"
+        >
+          Bridge the gaps within your marketing stack
+        </h2>
+        <p
+          className="text-2xl mt-3 font-light"
+          data-sal="fade"
+          data-sal-delay="100"
+          data-sal-duration="800"
+        >
           With no-code modeling and a simple, modern interface, all teams can now be data masters.
         </p>
       </div>
@@ -122,7 +140,15 @@ export default () => (
     <section className="mx-14 my-10 py-40 bg-gray-100 rounded-lg text-center">
       <div className="container mx-auto">
         <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
-        <Button size="xl" to="/sign-up" className="mt-10">
+        <p
+          className="text-2xl mt-3 font-light"
+          data-sal="fade"
+          data-sal-delay="100"
+          data-sal-duration="800"
+        >
+          With no-code modeling and a simple, modern interface, all teams can now be data masters.
+        </p>
+        <Button size="lg" to="/sign-up" className="mt-10">
           Start exploring your data instantly
         </Button>
       </div>

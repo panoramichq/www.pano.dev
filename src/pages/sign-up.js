@@ -4,7 +4,7 @@ import Recaptcha from 'react-recaptcha';
 
 export default () => (
   <Layout>
-    <div className="mx-14 p-14 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
+    <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
       <div className="container text-center lg:text-left lg:w-7/12 ">
         <h1
           className="text-8xl font-semibold leading-none"
@@ -56,13 +56,13 @@ export default () => (
           </div>
 
           <button
-            className="py-2 px-4 rounded-full text-white bg-blue-600 hover:bg-blue-800 transition duration-200"
+            className="py-3 px-6 rounded text-white bg-blue-600 hover:bg-blue-800 transition duration-200"
             type="submit"
           >
             Sign up for free
           </button>
         </form>
       </div>
-    </div>
+    </section>
   </Layout>
 );

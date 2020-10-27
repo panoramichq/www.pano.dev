@@ -4,8 +4,8 @@ import ButtonLink from '../components/ButtonLink';
 
 export default () => (
   <Layout>
-    <div className="mx-14 p-14 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
-      <div className="container text-left ">
+    <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
+      <div className="container text-center lg:text-left lg:w-7/12 ">
         <h1
           className="text-8xl font-semibold leading-none"
           data-sal="fade"
@@ -36,6 +36,6 @@ export default () => (
           </ButtonLink>
         </div>
       </div>
-    </div>
+    </section>
   </Layout>
 );
