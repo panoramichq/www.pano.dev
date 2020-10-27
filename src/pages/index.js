@@ -11,10 +11,7 @@ import SonyLogo from '../img/sony_pictures.png';
 
 export default () => (
   <Layout>
-    <section
-      id="hero"
-      className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded"
-    >
+    <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
       <div className="container text-center lg:text-left lg:w-7/12 ">
         <h1
           className="text-7xl font-semibold leading-none"
@@ -60,11 +57,13 @@ export default () => (
       </div>
     </section>
 
-    <section className="container mx-auto my-40 py-40 bg-gray-100 rounded-lg text-center">
-      <h2 className="text-4xl font-medium ">Bridge the gaps within your marketing stack</h2>
-      <p className="text-2xl mt-3 font-light">
-        With no-code modeling and a simple, modern interface, all teams can now be data masters.
-      </p>
+    <section className="mx-14 my-40 py-40 bg-gray-100 rounded-lg text-center">
+      <div className="container mx-auto">
+        <h2 className="text-4xl font-medium ">Bridge the gaps within your marketing stack</h2>
+        <p className="text-2xl mt-3 font-light">
+          With no-code modeling and a simple, modern interface, all teams can now be data masters.
+        </p>
+      </div>
     </section>
 
     <SplitSection
@@ -120,11 +119,13 @@ export default () => (
       }
       secondarySlot={<div className="w-96 h-96 bg-pink-300 rounded-3xl"></div>}
     />
-    <section className="container mx-auto my-10 py-40 bg-gray-100 rounded-lg text-center">
-      <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
-      <Button size="xl" to="/sign-up" className="mt-10">
-        Start exploring your data instantly
-      </Button>
+    <section className="mx-14 my-10 py-40 bg-gray-100 rounded-lg text-center">
+      <div className="container mx-auto">
+        <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
+        <Button size="xl" to="/sign-up" className="mt-10">
+          Start exploring your data instantly
+        </Button>
+      </div>
     </section>
   </Layout>
 );
