@@ -8,11 +8,12 @@ import BlumhouseLogo from '../img/blumhouse.png';
 import ChaChaLogo from '../img/cha_cha_matcha.png';
 import RepresentLogo from '../img/represent.png';
 import SonyLogo from '../img/sony_pictures.png';
+import TopImage from '../img/top.png';
 
 export default () => (
   <Layout>
-    <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
-      <div className="container text-center lg:text-left lg:w-7/12 ">
+    <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
+      <div className="container text-center lg:text-left lg:w-6/12 ">
         <h1
           className="text-7xl font-semibold leading-none"
           data-sal="fade"
@@ -43,6 +44,9 @@ export default () => (
           </Button>
           <ButtonLink href="https://docs.pano.dev/">Learn more →</ButtonLink>
         </div>
+      </div>
+      <div className="w-6/12" data-sal="fade" data-sal-delay="500" data-sal-duration="1000">
+        <img src={TopImage} alt="Top " className="absolute w-3/6" />
       </div>
     </section>
 
