@@ -19,7 +19,7 @@ export default function Header() {
           </Link>
           */}
           <Link href="https://docs.pano.dev/" target="_blank" rel="noopener noreferrer">
-            Documentation
+            Docs
           </Link>
         </nav>
 
