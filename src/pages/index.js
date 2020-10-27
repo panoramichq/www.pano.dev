@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../components/Button';
+import ImgWithFallback from '../components/ImgWithFallback';
 import Layout from '../components/layout/Layout';
 import ButtonLink from '../components/ButtonLink';
 import SweetgreenLogo from '../img/sweetgreen.png';
@@ -7,10 +8,14 @@ import BlumhouseLogo from '../img/blumhouse.png';
 import HanacureLogo from '../img/hanacure.png';
 import RepresentLogo from '../img/represent.png';
 import SonyLogo from '../img/sony_pictures.png';
-import TopImage from '../img/top.png';
-import illustration1 from '../img/il1.png';
-import illustration2 from '../img/il2.png';
-import illustration3 from '../img/il3.png';
+import TopImage from '../img/top.webp';
+import TopImageFallback from '../img/top.png';
+import Illustration1 from '../img/il1.webp';
+import Illustration1Fallback from '../img/il1.png';
+import Illustration2 from '../img/il2.webp';
+import Illustration2Fallback from '../img/il2.png';
+import Illustration3 from '../img/il3.webp';
+import Illustration3Fallback from '../img/il3.png';
 
 export default () => (
   <Layout>
@@ -48,7 +53,7 @@ export default () => (
         </div>
       </div>
       <div className="w-6/12" data-sal="fade" data-sal-delay="300" data-sal-duration="1000">
-        <img src={TopImage} alt="Top " className="absolute w-3/6" />
+        <ImgWithFallback src={TopImage} fallback={TopImageFallback} alt="Overview of Pano platform" className="absolute w-3/6"/>
       </div>
     </section>
 
@@ -102,7 +107,7 @@ export default () => (
         </div>
         <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
           <div className="w-full mx-auto">
-            <img src={illustration1} alt="Illustration 1" className="w-10/12" />
+            <ImgWithFallback src={Illustration1} fallback={Illustration1Fallback} alt="Prepare your data" className="w-10/12"/>
           </div>
         </div>
       </div>
@@ -112,7 +117,7 @@ export default () => (
       <div className="container mx-auto px-10 items-center flex flex-col lg:flex-row">
         <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
           <div className="w-full justify-center">
-            <img src={illustration2} alt="Illustration 2" className="w-10/12 " />
+            <ImgWithFallback src={Illustration2} fallback={Illustration2Fallback} alt="Customize your model" className="w-10/12"/>
           </div>
         </div>
         <div className="lg:w-1/2">
@@ -150,7 +155,7 @@ export default () => (
         </div>
         <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
           <div className="w-full justify-center">
-            <img src={illustration3} alt="Illustration 3" className="w-10/12" />
+            <ImgWithFallback src={Illustration3} fallback={Illustration3Fallback} alt="Share your insights" className="w-10/12"/>
           </div>
         </div>
       </div>
