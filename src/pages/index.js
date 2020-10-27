@@ -63,7 +63,7 @@ export default () => (
       </div>
     </section>
 
-    <section className="mx-14 my-20 py-40 bg-gray-100 rounded-lg text-center">
+    <section className="mx-14 mt-20 mb-40 py-40 bg-gray-100 rounded-lg text-center">
       <div className="container mx-auto">
         <h2
           className="text-4xl font-medium"
@@ -87,24 +87,22 @@ export default () => (
     <section>
       <div className="container mx-auto px-10 items-center flex flex-col lg:flex-row">
         <div className="lg:w-1/2">
-          <h3 className="text-3xl font-semibold leading-tight">Prepare your Data</h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
-            Fix naming issues, apply custom groupings, remove duplicate records and clean your data
-            so its ready for analysis.
-          </p>
-          <p className="mt-8">
-            <ButtonLink href="https://docs.pano.dev/data-preparation/overview">
-              Learn more →
-            </ButtonLink>
-          </p>
+          <div className="w-10/12 float-right">
+            <h3 className="text-3xl font-semibold leading-tight">Prepare your Data</h3>
+            <p className="mt-8 text-xl font-light leading-relaxed">
+              Fix naming issues, apply custom groupings, remove duplicate records and clean your
+              data so its ready for analysis.
+            </p>
+            <p className="mt-8">
+              <ButtonLink href="https://docs.pano.dev/data-preparation/overview">
+                Learn more →
+              </ButtonLink>
+            </p>
+          </div>
         </div>
         <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
           <div className="w-full mx-auto">
-            <img
-              src={illustration1}
-              alt="Illustration 1"
-              className="w-10/12 float-right"
-            />
+            <img src={illustration1} alt="Illustration 1" className="w-10/12" />
           </div>
         </div>
       </div>
@@ -114,20 +112,22 @@ export default () => (
       <div className="container mx-auto px-10 items-center flex flex-col lg:flex-row">
         <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
           <div className="w-full justify-center">
-            <img src={illustration2} alt="Illustration 2" className="w-10/12" />
+            <img src={illustration2} alt="Illustration 2" className="w-10/12 " />
           </div>
         </div>
         <div className="lg:w-1/2">
-          <h3 className="text-3xl font-semibold leading-tight">Customize your Model</h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
-            Organize reports from all your partners into one unified data glossary to keep everyone
-            in your company aligned.
-          </p>
-          <p className="mt-8">
-            <ButtonLink href="https://docs.pano.dev/data-definition/untitled">
-              Learn more →
-            </ButtonLink>
-          </p>
+          <div className="w-10/12 float-left">
+            <h3 className="text-3xl font-semibold leading-tight">Customize your Model</h3>
+            <p className="mt-8 text-xl font-light leading-relaxed">
+              Organize reports from all your partners into one unified data glossary to keep
+              everyone in your company aligned.
+            </p>
+            <p className="mt-8">
+              <ButtonLink href="https://docs.pano.dev/data-definition/untitled">
+                Learn more →
+              </ButtonLink>
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -135,26 +135,28 @@ export default () => (
     <section>
       <div className="container mx-auto px-10 items-center flex flex-col lg:flex-row">
         <div className="lg:w-1/2">
-          <h3 className="text-3xl font-semibold leading-tight">Share your Insights</h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
-            Invite teams to build their own reports with accurate metrics, contextual benchmarks and
-            automated performance monitoring.
-          </p>
-          <p className="mt-8">
-            <ButtonLink href="https://docs.pano.dev/getting-started/creating-workspaces">
-              Learn more →
-            </ButtonLink>
-          </p>
+          <div className="w-10/12 float-right">
+            <h3 className="text-3xl font-semibold leading-tight">Share your Insights</h3>
+            <p className="mt-8 text-xl font-light leading-relaxed">
+              Invite teams to build their own reports with accurate metrics, contextual benchmarks
+              and automated performance monitoring.
+            </p>
+            <p className="mt-8">
+              <ButtonLink href="https://docs.pano.dev/getting-started/creating-workspaces">
+                Learn more →
+              </ButtonLink>
+            </p>
+          </div>
         </div>
         <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
           <div className="w-full justify-center">
-            <img src={illustration3} alt="Illustration 3" className="w-10/12 float-right" />
+            <img src={illustration3} alt="Illustration 3" className="w-10/12" />
           </div>
         </div>
       </div>
     </section>
 
-    <section className="mx-14 my-10 py-40 bg-gray-100 rounded-lg text-center">
+    <section className="mx-14 mt-36 mb-10 py-40 bg-gray-100 rounded-lg text-center">
       <div className="container mx-auto">
         <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
         <p
