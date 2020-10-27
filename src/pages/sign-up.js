@@ -29,6 +29,7 @@ export default () => (
           data-netlify-recaptcha="true"
           data-netlify="true"
           className="mt-10"
+          action="/welcome"
         >
           <input type="hidden" name="form-name" value="signup" />
 
