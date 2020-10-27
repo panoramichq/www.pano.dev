@@ -69,7 +69,7 @@ export default () => (
           data-sal-delay="100"
           data-sal-duration="800"
         >
-          Bridge the gaps within your marketing stack
+          Don't let valuable insights get lost in the backlog
         </h2>
         <p
           className="text-2xl mt-3 font-light"
