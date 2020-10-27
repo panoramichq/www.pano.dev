@@ -4,13 +4,13 @@ import Layout from '../components/layout/Layout';
 import ButtonLink from '../components/ButtonLink';
 import SweetgreenLogo from '../img/sweetgreen.png';
 import BlumhouseLogo from '../img/blumhouse.png';
-import ChaChaLogo from '../img/cha_cha_matcha.png';
+import HanacureLogo from '../img/hanacure.png';
 import RepresentLogo from '../img/represent.png';
 import SonyLogo from '../img/sony_pictures.png';
-import TopImage from '../img/top.webp';
-import illustration1 from '../img/il1.webp';
-import illustration2 from '../img/il2.webp';
-import illustration3 from '../img/il3.webp';
+import TopImage from '../img/top.png';
+import illustration1 from '../img/il1.png';
+import illustration2 from '../img/il2.png';
+import illustration3 from '../img/il3.png';
 
 export default () => (
   <Layout>
@@ -56,7 +56,7 @@ export default () => (
       <h2 className="tracking-wider mb-10 text-gray-600 text-center">Trusted by great companies</h2>
       <div className="container mx-auto px-8 lg:flex justify-between items-center opacity-75">
         <img src={SweetgreenLogo} alt="Sweetgreen" class="w-40 h-full" />
-        <img src={ChaChaLogo} alt="Cha Cha Matcha" class="w-40 h-full" />
+        <img src={HanacureLogo} alt="Hanacure" class="w-40 h-full" />
         <img src={BlumhouseLogo} alt="Blumhouse" class="w-40 h-full" />
         <img src={SonyLogo} alt="Sony" class="w-40 h-full" />
         <img src={RepresentLogo} alt="Represent" class="w-40 h-full" />

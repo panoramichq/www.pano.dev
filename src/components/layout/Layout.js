@@ -8,7 +8,7 @@ export default function Layout({ children, title = 'Pano' }) {
     <>
       <Helmet>
         <title>{title}</title>
-        <meta name="description" content="Data transforamtion simplified" />
+        <meta name="description" content="Data transformation simplified" />
       </Helmet>
       <Header />
       <main>{children}</main>
