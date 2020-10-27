@@ -8,7 +8,8 @@ export default function Layout({ children, title = 'Pano' }) {
     <>
       <Helmet>
         <title>{title}</title>
-        <meta name="description" content="Data transforamtion simplified" />
+        <meta name="description" content="Data transforamtion simplified" />{' '}
+        <link rel="icon" type="image/png" href="img/favicon.ico" sizes="16x16" />
       </Helmet>
       <Header />
       <main>{children}</main>
