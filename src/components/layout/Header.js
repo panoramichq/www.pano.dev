@@ -18,13 +18,13 @@ export default function Header() {
             Product
           </Link>
           */}
-          <Link href="https://docs.pano.dev/" target="_blank" rel="noopener noreferrer">
-            Docs
-          </Link>
         </nav>
 
         <div className="lg:w-1/3 block space-x-8 place-items-end text-right">
-          <a href="https://platform.panoramichq.com">Log in</a>
+          <Link href="https://docs.pano.dev/" target="_blank" rel="noopener noreferrer">
+            Docs
+          </Link>
+          <Link href="https://platform.panoramichq.com">Log in</Link>
           <Button to="/sign-up">Sign up for free</Button>
         </div>
       </div>
