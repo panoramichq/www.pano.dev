@@ -30,6 +30,9 @@ export default () => (
           data-netlify="true"
           className="mt-10"
           action="/sign-up-complete"
+          data-sal="fade"
+          data-sal-delay="300"
+          data-sal-duration="1000"
         >
           <input type="hidden" name="form-name" value="signup" />
 

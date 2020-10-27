@@ -45,7 +45,7 @@ export default () => (
           <ButtonLink href="https://docs.pano.dev/">Learn more →</ButtonLink>
         </div>
       </div>
-      <div className="w-6/12" data-sal="fade" data-sal-delay="500" data-sal-duration="1000">
+      <div className="w-6/12" data-sal="fade" data-sal-delay="300" data-sal-duration="1000">
         <img src={TopImage} alt="Top " className="absolute w-3/6" />
       </div>
     </section>
