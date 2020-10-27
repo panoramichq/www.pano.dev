@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '../components/Button';
 import Layout from '../components/layout/Layout';
-import SplitSection from '../components/SplitSection';
 import ButtonLink from '../components/ButtonLink';
 import SweetgreenLogo from '../img/sweetgreen.png';
 import BlumhouseLogo from '../img/blumhouse.png';
@@ -9,6 +8,9 @@ import ChaChaLogo from '../img/cha_cha_matcha.png';
 import RepresentLogo from '../img/represent.png';
 import SonyLogo from '../img/sony_pictures.png';
 import TopImage from '../img/top.webp';
+import illustration1 from '../img/il1.webp';
+import illustration2 from '../img/il2.webp';
+import illustration3 from '../img/il3.webp';
 
 export default () => (
   <Layout>
@@ -61,7 +63,7 @@ export default () => (
       </div>
     </section>
 
-    <section className="mx-14 my-40 py-40 bg-gray-100 rounded-lg text-center">
+    <section className="mx-14 my-20 py-40 bg-gray-100 rounded-lg text-center">
       <div className="container mx-auto">
         <h2
           className="text-4xl font-medium"
@@ -82,10 +84,9 @@ export default () => (
       </div>
     </section>
 
-    <SplitSection
-      id="services"
-      primarySlot={
-        <div className="lg:pr-24">
+    <section>
+      <div className="container mx-auto px-10 items-center flex flex-col lg:flex-row">
+        <div className="lg:w-1/2">
           <h3 className="text-3xl font-semibold leading-tight">Prepare your Data</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
             Fix naming issues, apply custom groupings, remove duplicate records and clean your data
@@ -97,13 +98,26 @@ export default () => (
             </ButtonLink>
           </p>
         </div>
-      }
-      secondarySlot={<div className="w-96 h-96 bg-yellow-300 rounded-3xl"></div>}
-    />
-    <SplitSection
-      reverseOrder
-      primarySlot={
-        <div className="lg:pl-24">
+        <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
+          <div className="w-full mx-auto">
+            <img
+              src={illustration1}
+              alt="Illustration 1"
+              className="w-10/12 float-right"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div className="container mx-auto px-10 items-center flex flex-col lg:flex-row">
+        <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
+          <div className="w-full justify-center">
+            <img src={illustration2} alt="Illustration 2" className="w-10/12" />
+          </div>
+        </div>
+        <div className="lg:w-1/2">
           <h3 className="text-3xl font-semibold leading-tight">Customize your Model</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
             Organize reports from all your partners into one unified data glossary to keep everyone
@@ -115,12 +129,12 @@ export default () => (
             </ButtonLink>
           </p>
         </div>
-      }
-      secondarySlot={<div className="w-96 h-96 bg-teal-300 rounded-3xl"></div>}
-    />
-    <SplitSection
-      primarySlot={
-        <div className="lg:pr-24">
+      </div>
+    </section>
+
+    <section>
+      <div className="container mx-auto px-10 items-center flex flex-col lg:flex-row">
+        <div className="lg:w-1/2">
           <h3 className="text-3xl font-semibold leading-tight">Share your Insights</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
             Invite teams to build their own reports with accurate metrics, contextual benchmarks and
@@ -132,9 +146,14 @@ export default () => (
             </ButtonLink>
           </p>
         </div>
-      }
-      secondarySlot={<div className="w-96 h-96 bg-pink-300 rounded-3xl"></div>}
-    />
+        <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
+          <div className="w-full justify-center">
+            <img src={illustration3} alt="Illustration 3" className="w-10/12 float-right" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section className="mx-14 my-10 py-40 bg-gray-100 rounded-lg text-center">
       <div className="container mx-auto">
         <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
