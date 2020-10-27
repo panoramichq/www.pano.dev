@@ -8,7 +8,7 @@ import BlumhouseLogo from '../img/blumhouse.png';
 import ChaChaLogo from '../img/cha_cha_matcha.png';
 import RepresentLogo from '../img/represent.png';
 import SonyLogo from '../img/sony_pictures.png';
-import TopImage from '../img/top.png';
+import TopImage from '../img/top.webp';
 
 export default () => (
   <Layout>
