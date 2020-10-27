@@ -7,7 +7,7 @@ export default () => (
     <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
       <div className="container text-center lg:text-left lg:w-7/12 ">
         <h1
-          className="text-8xl font-semibold leading-none"
+          className="text-7xl font-semibold leading-none"
           data-sal="fade"
           data-sal-delay="200"
           data-sal-duration="1000"
