@@ -59,7 +59,7 @@ export default () => (
           </div>
 
           <button
-            className="py-3 px-6 rounded text-white bg-blue-600 hover:bg-blue-800 transition duration-200"
+            className="py-3 px-6 rounded-full text-white bg-blue-600 hover:bg-blue-800 transition duration-200"
             type="submit"
           >
             Sign up for free
