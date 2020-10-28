@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 export default function Header() {
   return (
-    <header className="top-0 sticky my-4 bg-white zIndex-30">
+    <header className="top-0 sticky my-4 bg-white z-30">
       <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-3 px-8 font-medium">
         <div className="lg:w-1/3">
           <Link className="text-2xl" activeClassName="text-black" to="/">
