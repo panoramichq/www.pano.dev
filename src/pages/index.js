@@ -7,7 +7,6 @@ import Img from 'gatsby-image';
 
 export default ({ data }) => (
   <Layout>
-    {console.log(data)}
     <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
       <div className="container text-center lg:text-left lg:w-6/12 ">
         <h1
@@ -49,6 +48,7 @@ export default ({ data }) => (
     </section>
 
     <section id="clients" className="my-40">
+      
       <h2 className="tracking-wider mb-10 text-gray-600 text-center">Trusted by great companies</h2>
       <div className="container mx-auto px-8 lg:flex justify-between items-center opacity-75">
         <Img
