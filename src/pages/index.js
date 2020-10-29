@@ -1,24 +1,13 @@
 import React from 'react';
 import Button from '../components/Button';
-import ImgWithFallback from '../components/ImgWithFallback';
 import Layout from '../components/layout/Layout';
 import ButtonLink from '../components/ButtonLink';
-import SweetgreenLogo from '../img/sweetgreen.png';
-import BlumhouseLogo from '../img/blumhouse.png';
-import HanacureLogo from '../img/hanacure.png';
-import RepresentLogo from '../img/represent.png';
-import SonyLogo from '../img/sony_pictures.png';
-import TopImage from '../img/top.webp';
-import TopImageFallback from '../img/top.png';
-import Illustration1 from '../img/il1.webp';
-import Illustration1Fallback from '../img/il1.png';
-import Illustration2 from '../img/il2.webp';
-import Illustration2Fallback from '../img/il2.png';
-import Illustration3 from '../img/il3.webp';
-import Illustration3Fallback from '../img/il3.png';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-export default () => (
+export default ({ data }) => (
   <Layout>
+    {console.log(data)}
     <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
       <div className="container text-center lg:text-left lg:w-6/12 ">
         <h1
@@ -53,18 +42,36 @@ export default () => (
         </div>
       </div>
       <div className="w-6/12" data-sal="fade" data-sal-delay="300" data-sal-duration="1000">
-        <ImgWithFallback src={TopImage} fallback={TopImageFallback} alt="Overview of Pano platform" className="absolute w-3/6"/>
+        <div className="absolute w-3/6">
+          <Img fluid={data.topImage.childImageSharp.fluid} alt="Overview of Pano platform" />
+        </div>
       </div>
     </section>
 
     <section id="clients" className="my-40">
       <h2 className="tracking-wider mb-10 text-gray-600 text-center">Trusted by great companies</h2>
       <div className="container mx-auto px-8 lg:flex justify-between items-center opacity-75">
-        <img src={SweetgreenLogo} alt="Sweetgreen" class="w-40 h-full" />
-        <img src={HanacureLogo} alt="Hanacure" class="w-40 h-full" />
-        <img src={BlumhouseLogo} alt="Blumhouse" class="w-40 h-full" />
-        <img src={SonyLogo} alt="Sony" class="w-40 h-full" />
-        <img src={RepresentLogo} alt="Represent" class="w-40 h-full" />
+        <Img
+          fixed={data.sweetgreenLogo.childImageSharp.fixed}
+          alt="Sweetgreen"
+          className="w-40 h-full"
+        />
+        <Img
+          fixed={data.hanacureLogo.childImageSharp.fixed}
+          alt="Hanacure"
+          className="w-40 h-full"
+        />
+        <Img
+          fixed={data.blumhouseLogo.childImageSharp.fixed}
+          alt="Blumhouse"
+          className="w-40 h-full"
+        />
+        <Img fixed={data.sonyLogo.childImageSharp.fixed} alt="Sony" className="w-40 h-full" />
+        <Img
+          fixed={data.representLogo.childImageSharp.fixed}
+          alt="Represent"
+          className="w-40 h-full"
+        />
       </div>
     </section>
 
@@ -107,7 +114,11 @@ export default () => (
         </div>
         <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
           <div className="w-full mx-auto">
-            <ImgWithFallback src={Illustration1} fallback={Illustration1Fallback} alt="Prepare your data" className="w-10/12"/>
+            <Img
+              fluid={data.illustration1.childImageSharp.fluid}
+              alt="Prepare your data"
+              className="w-10/12"
+            />
           </div>
         </div>
       </div>
@@ -117,7 +128,11 @@ export default () => (
       <div className="container mx-auto px-10 items-center flex flex-col lg:flex-row">
         <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
           <div className="w-full justify-center">
-            <ImgWithFallback src={Illustration2} fallback={Illustration2Fallback} alt="Customize your model" className="w-10/12"/>
+            <Img
+              fluid={data.illustration2.childImageSharp.fluid}
+              alt="Customize your model"
+              className="w-10/12"
+            />
           </div>
         </div>
         <div className="lg:w-1/2">
@@ -155,7 +170,11 @@ export default () => (
         </div>
         <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
           <div className="w-full justify-center">
-            <ImgWithFallback src={Illustration3} fallback={Illustration3Fallback} alt="Share your insights" className="w-10/12"/>
+            <Img
+              fluid={data.illustration3.childImageSharp.fluid}
+              alt="Share your insights"
+              className="w-10/12"
+            />
           </div>
         </div>
       </div>
@@ -179,3 +198,59 @@ export default () => (
     </section>
   </Layout>
 );
+
+export const featureImg = graphql`
+  fragment featureImg on File {
+    childImageSharp {
+      fluid(maxWidth: 500, quality: 95, pngCompressionSpeed: 2) {
+        ...GatsbyImageSharpFluid_withWebp
+      }
+    }
+  }
+`;
+
+export const logoImg = graphql`
+  fragment logoImg on File {
+    childImageSharp {
+      fixed(width: 160, height: 80, quality: 87) {
+        ...GatsbyImageSharpFixed_withWebp
+      }
+    }
+  }
+`;
+
+export const query = graphql`
+  query {
+    topImage: file(relativePath: { eq: "top.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800, quality: 90, pngCompressionSpeed: 2) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sweetgreenLogo: file(relativePath: { eq: "sweetgreen.png" }) {
+      ...logoImg
+    }
+    blumhouseLogo: file(relativePath: { eq: "blumhouse.png" }) {
+      ...logoImg
+    }
+    hanacureLogo: file(relativePath: { eq: "hanacure.png" }) {
+      ...logoImg
+    }
+    representLogo: file(relativePath: { eq: "represent.png" }) {
+      ...logoImg
+    }
+    sonyLogo: file(relativePath: { eq: "sony_pictures.png" }) {
+      ...logoImg
+    }
+    illustration1: file(relativePath: { eq: "il1.png" }) {
+      ...featureImg
+    }
+    illustration2: file(relativePath: { eq: "il2.png" }) {
+      ...featureImg
+    }
+    illustration3: file(relativePath: { eq: "il3.png" }) {
+      ...featureImg
+    }
+  }
+`;
