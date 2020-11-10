@@ -10,7 +10,7 @@ export default ({ data }) => (
     <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
       <div className="container text-center lg:text-left lg:w-6/12 ">
         <h1
-          className="text-7xl font-semibold leading-none"
+          className="md:text-7xl font-semibold leading-none"
           data-sal="fade"
           data-sal-delay="200"
           data-sal-duration="1000"
@@ -40,7 +40,7 @@ export default ({ data }) => (
           <ButtonLink href="https://docs.pano.dev/">Learn more →</ButtonLink>
         </div>
       </div>
-      <div className="w-6/12" data-sal="fade" data-sal-delay="300" data-sal-duration="1000">
+      <div className="hide-mobile w-6/12" data-sal="fade" data-sal-delay="300" data-sal-duration="1000">
         <div className="absolute w-3/6">
           <Img fluid={data.topImage.childImageSharp.fluid} alt="Overview of Pano platform" />
         </div>
@@ -117,7 +117,7 @@ export default ({ data }) => (
             <Img
               fluid={data.illustration1.childImageSharp.fluid}
               alt="Prepare your data"
-              className="w-10/12"
+              className="hide-mobile w-10/12"
             />
           </div>
         </div>
@@ -131,7 +131,7 @@ export default ({ data }) => (
             <Img
               fluid={data.illustration2.childImageSharp.fluid}
               alt="Customize your model"
-              className="w-10/12"
+              className="hide-mobile w-10/12"
             />
           </div>
         </div>
@@ -173,7 +173,7 @@ export default ({ data }) => (
             <Img
               fluid={data.illustration3.childImageSharp.fluid}
               alt="Share your insights"
-              className="w-10/12"
+              className="hide-mobile w-10/12"
             />
           </div>
         </div>
