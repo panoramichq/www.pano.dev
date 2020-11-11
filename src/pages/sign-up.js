@@ -4,7 +4,7 @@ import Recaptcha from 'react-recaptcha';
 
 export default () => (
   <Layout>
-    <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
+    <section className="container mx-auto mt-4 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
       <div className="container text-center lg:text-left ">
         <h1
           className="text-7xl  font-semibold leading-none"
@@ -30,9 +30,6 @@ export default () => (
           data-netlify="true"
           className="mt-10"
           action="/sign-up-complete"
-          data-sal="fade"
-          data-sal-delay="300"
-          data-sal-duration="1000"
         >
           <input type="hidden" name="form-name" value="signup" />
 
@@ -59,7 +56,7 @@ export default () => (
           </div>
 
           <button
-            className="py-3 px-6 rounded-full text-white bg-blue-600 hover:bg-blue-800 transition duration-200"
+            className="py-3 px-6 rounded text-white bg-blue-600 hover:bg-blue-800 transition duration-200"
             type="submit"
           >
             Sign up for free

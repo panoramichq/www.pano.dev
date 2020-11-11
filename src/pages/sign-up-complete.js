@@ -4,7 +4,7 @@ import ButtonLink from '../components/ButtonLink';
 
 export default () => (
   <Layout>
-    <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded">
+    <section className="container mx-auto mt-4 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
       <div className="container text-center lg:text-left lg:w-7/12 ">
         <h1
           className="text-7xl font-semibold leading-none"
