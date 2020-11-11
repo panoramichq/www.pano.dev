@@ -11,7 +11,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="space-y-8 sm:space-y-0 sm:flex sm:space-x-8">
+        <div className="space-y-8 sm:space-y-0 sm:flex sm:space-x-10">
           <div>
             <h2 className="text-lg font-semibold">Social</h2>
             <ul className="mt-4 leading-loose">

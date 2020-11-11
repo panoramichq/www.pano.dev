@@ -15,8 +15,8 @@ export default ({ data }) => (
           simplified.
         </h1>
         <p className="lg:text-xl mt-10 font-ligh text-gray-800">
-          Bridge the gap between raw data and valuable insights. The easy-to-use platform allows you
-          to quickly map and transform data to fit your requirements.
+          Bridge the gap between raw data and insights. The easy-to-use platform allows you to
+          quickly map and transform data to fit your requirements.
         </p>
         <div className="mt-12 mb-2 space-x-6">
           <Button size="lg" to="/sign-up">
@@ -35,7 +35,7 @@ export default ({ data }) => (
       </div>
     </section>
 
-    <section id="clients" className="my-40 container mx-auto ">
+    <section id="clients" className="my-40 container mx-auto px-8">
       <h2 className="tracking-wider mb-10 text-gray-600 text-center">Trusted by great companies</h2>
       <div className="mx-auto px-8 lg:flex justify-between items-center opacity-75">
         <Img
@@ -62,15 +62,11 @@ export default ({ data }) => (
       </div>
     </section>
 
-    <section className="container mx-auto mt-20 mb-40 py-40 bg-gray-100 rounded-lg text-center">
-      <div className="container mx-auto">
-        <h2 className="text-4xl font-medium">
-          Don't let valuable insights get lost in the backlog
-        </h2>
-        <p className="text-2xl mt-3 font-light">
-          With no-code modeling and a simple, modern interface, all teams can now be data masters.
-        </p>
-      </div>
+    <section className="container mx-auto my-20 py-40 px-4 bg-gray-100 rounded-lg text-center">
+      <h2 className="text-4xl font-medium">Don't let valuable insights get lost in the backlog</h2>
+      <p className="text-2xl mt-3 font-light">
+        With no-code modeling and a simple, modern interface, all teams can now be data masters.
+      </p>
     </section>
 
     <section>
@@ -157,16 +153,14 @@ export default ({ data }) => (
       </div>
     </section>
 
-    <section className="mx-14 mt-36 mb-10 py-40 bg-gray-100 rounded-lg text-center">
-      <div className="container mx-auto">
-        <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
-        <p className="text-2xl mt-3 font-light">
-          With no-code modeling and a simple, modern interface, all teams can now be data masters.
-        </p>
-        <Button size="lg" to="/sign-up" className="mt-10">
-          Start exploring your data instantly
-        </Button>
-      </div>
+    <section className="container mx-auto my-20 py-40 px-4 bg-gray-100 rounded-lg text-center">
+      <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
+      <p className="text-2xl mt-3 font-light">
+        With no-code modeling and a simple, modern interface, all teams can now be data masters.
+      </p>
+      <Button size="lg" to="/sign-up" className="mt-10">
+        Start exploring your data instantly
+      </Button>
     </section>
   </Layout>
 );
