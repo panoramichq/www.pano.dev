@@ -12,11 +12,11 @@
     @apply container mx-auto mt-4 p-4 lg:p-14 py-10 lg:py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded;
   }
   .section {
-    @apply container mx-auto my-32 px-8;
+    @apply container mx-auto my-16 lg:my-32 px-8;
   }
 
   .section-box {
-    @apply container mx-auto my-20 py-32 px-8 bg-gray-100 rounded-lg;
+    @apply container mx-auto my-10 lg:my-20 py-16 lg:py-32 px-8 bg-gray-100 rounded-lg;
   }
 }
 @tailwind components;

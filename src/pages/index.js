@@ -29,21 +29,52 @@ export default ({ data }) => (
       </div>
       <div className="w-6/12 hidden md:block z-10">
         <div className="absolute w-1/2">
-          <Img fluid={data.topImage.childImageSharp.fluid} alt="Overview of Pano platform" />
+          <Img
+            fluid={data.topImage.childImageSharp.fluid}
+            objectFit="cover"
+            alt="Overview of Pano platform"
+          />
         </div>
       </div>
     </section>
 
-    <section id="clients" className="container mx-auto my-40">
+    <section id="clients" className="container mx-auto my-20 lg:my-40">
       <h2 className="lg:text-xl mb-10 font-ligh text-gray-800 text-center">
         Trusted by great companies
       </h2>
-      <div className="mx-auto lg:px-8 flex justify-between flex-col sm:flex-row space-y-10 sm:space-y-0 items-center opacity-75">
-        <Img fixed={data.sweetgreenLogo.childImageSharp.fixed} alt="Sweetgreen" className="w-40" />
-        <Img fixed={data.hanacureLogo.childImageSharp.fixed} alt="Hanacure" className="w-40" />
-        <Img fixed={data.blumhouseLogo.childImageSharp.fixed} alt="Blumhouse" className="w-40" />
-        <Img fixed={data.sonyLogo.childImageSharp.fixed} alt="Sony" className="w-40" />
-        <Img fixed={data.representLogo.childImageSharp.fixed} alt="Represent" className="w-40" />
+      <div className="flex flex-wrap justify-center opacity-75">
+        <Img
+          fixed={data.sweetgreenLogo.childImageSharp.fixed}
+          alt="Sweetgreen"
+          objectFit="contain"
+          className="w-40 m-8"
+        />
+
+        <Img
+          fixed={data.sonyLogo.childImageSharp.fixed}
+          alt="Sony"
+          objectFit="contain"
+          className="w-40 m-8"
+        />
+        <Img
+          fixed={data.blumhouseLogo.childImageSharp.fixed}
+          alt="Blumhouse"
+          objectFit="contain"
+          className="w-40 m-8"
+        />
+        <Img
+          fixed={data.hanacureLogo.childImageSharp.fixed}
+          alt="Hanacure"
+          objectFit="contain"
+          className="w-40 m-8"
+        />
+
+        <Img
+          fixed={data.representLogo.childImageSharp.fixed}
+          alt="Represent"
+          objectFit="contain"
+          className="w-40 m-8"
+        />
       </div>
     </section>
 
