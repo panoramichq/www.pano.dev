@@ -7,50 +7,34 @@ import Img from 'gatsby-image';
 
 export default ({ data }) => (
   <Layout>
-    <section className="mx-14 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
-      <div className="container text-center lg:text-left lg:w-6/12 ">
-        <h1
-          className="text-7xl font-semibold leading-none"
-          data-sal="fade"
-          data-sal-delay="200"
-          data-sal-duration="1000"
-        >
+    <section className="container mx-auto mt-4 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
+      <div className="text-center lg:text-left lg:w-6/12 ">
+        <h1 className="text-7xl font-semibold leading-none">
           <div className="text-blue-600">Data</div>
-          <div className="text-indigo-600">Transformation</div>
+          <div className="text-blue-600">Transformation</div>
           <div className="text-purple-600">Simplified</div>
         </h1>
-        <p
-          className="text-xl mt-10 font-ligh"
-          data-sal="fade"
-          data-sal-delay="300"
-          data-sal-duration="1000"
-        >
+        <p className="text-xl mt-10 font-ligh">
           Bridge the gap between raw data and valuable insights. The easy-to-use platform allows you
           to quickly map and transform data to fit your requirements.
         </p>
-        <div
-          className="mt-12 mb-2 space-x-6"
-          data-sal="fade"
-          data-sal-delay="500"
-          data-sal-duration="1000"
-        >
+        <div className="mt-12 mb-2 space-x-6">
           <Button size="lg" to="/sign-up">
             Sign up for free
           </Button>
           <ButtonLink href="https://docs.pano.dev/">Learn more →</ButtonLink>
         </div>
       </div>
-      <div className="w-6/12" data-sal="fade" data-sal-delay="300" data-sal-duration="1000">
+      <div className="w-6/12">
         <div className="absolute w-3/6">
           <Img fluid={data.topImage.childImageSharp.fluid} alt="Overview of Pano platform" />
         </div>
       </div>
     </section>
 
-    <section id="clients" className="my-40">
-      
+    <section id="clients" className="my-40 container mx-auto ">
       <h2 className="tracking-wider mb-10 text-gray-600 text-center">Trusted by great companies</h2>
-      <div className="container mx-auto px-8 lg:flex justify-between items-center opacity-75">
+      <div className="mx-auto px-8 lg:flex justify-between items-center opacity-75">
         <Img
           fixed={data.sweetgreenLogo.childImageSharp.fixed}
           alt="Sweetgreen"
@@ -75,22 +59,12 @@ export default ({ data }) => (
       </div>
     </section>
 
-    <section className="mx-14 mt-20 mb-40 py-40 bg-gray-100 rounded-lg text-center">
+    <section className="container mx-auto mt-20 mb-40 py-40 bg-gray-100 rounded-lg text-center">
       <div className="container mx-auto">
-        <h2
-          className="text-4xl font-medium"
-          data-sal="fade"
-          data-sal-delay="100"
-          data-sal-duration="800"
-        >
+        <h2 className="text-4xl font-medium">
           Don't let valuable insights get lost in the backlog
         </h2>
-        <p
-          className="text-2xl mt-3 font-light"
-          data-sal="fade"
-          data-sal-delay="100"
-          data-sal-duration="800"
-        >
+        <p className="text-2xl mt-3 font-light">
           With no-code modeling and a simple, modern interface, all teams can now be data masters.
         </p>
       </div>
@@ -183,12 +157,7 @@ export default ({ data }) => (
     <section className="mx-14 mt-36 mb-10 py-40 bg-gray-100 rounded-lg text-center">
       <div className="container mx-auto">
         <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
-        <p
-          className="text-2xl mt-3 font-light"
-          data-sal="fade"
-          data-sal-delay="100"
-          data-sal-duration="800"
-        >
+        <p className="text-2xl mt-3 font-light">
           With no-code modeling and a simple, modern interface, all teams can now be data masters.
         </p>
         <Button size="lg" to="/sign-up" className="mt-10">

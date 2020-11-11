@@ -15,7 +15,7 @@ export default function Button({ children, to, className = '', size }) {
         className={`
         ${sizes[size] || sizes.default}
         ${className}
-        rounded-full
+        rounded
         text-white
         bg-blue-600 
         hover:bg-blue-800
