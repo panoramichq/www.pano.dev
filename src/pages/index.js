@@ -7,9 +7,9 @@ import Img from 'gatsby-image';
 
 export default ({ data }) => (
   <Layout>
-    <section className="container mx-auto mt-4 p-4 lg:p-14 py-10 lg:py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
+    <section className="section-hero relative overflow-hidden">
       <div className="p-4 text-left lg:w-6/12 z-20">
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold leading-none ">
+        <h1>
           Data <br />
           transformation <br />
           simplified.
@@ -22,7 +22,6 @@ export default ({ data }) => (
           <Button size="lg" to="/sign-up">
             Sign up for free
           </Button>
-
           <ButtonLink className="hidden sm:inline-block" href="https://docs.pano.dev/">
             Learn more →
           </ButtonLink>
@@ -35,7 +34,7 @@ export default ({ data }) => (
       </div>
     </section>
 
-    <section id="clients" className="my-40 container mx-auto px-8">
+    <section id="clients" className="section">
       <h2 className="tracking-wider mb-10 text-gray-600 text-center">Trusted by great companies</h2>
       <div className="mx-auto px-8 lg:flex justify-between items-center opacity-75">
         <Img
@@ -62,15 +61,15 @@ export default ({ data }) => (
       </div>
     </section>
 
-    <section className="container mx-auto my-20 py-40 px-4 bg-gray-100 rounded-lg text-center">
+    <section className="section-box text-center">
       <h2 className="text-4xl font-medium">Don't let valuable insights get lost in the backlog</h2>
       <p className="text-2xl mt-3 font-light">
         With no-code modeling and a simple, modern interface, all teams can now be data masters.
       </p>
     </section>
 
-    <section>
-      <div className="container mx-auto px-10 items-center flex flex-col lg:flex-row">
+    <section className="section">
+      <div className="items-center flex flex-col lg:flex-row">
         <div className="lg:w-1/2">
           <div className="w-10/12 float-right">
             <h3 className="text-3xl font-semibold leading-tight">Prepare your Data</h3>
@@ -97,8 +96,8 @@ export default ({ data }) => (
       </div>
     </section>
 
-    <section>
-      <div className="container mx-auto px-10 items-center flex flex-col lg:flex-row">
+    <section className="section">
+      <div className="items-center flex flex-col lg:flex-row">
         <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
           <div className="w-full justify-center">
             <Img
@@ -125,8 +124,8 @@ export default ({ data }) => (
       </div>
     </section>
 
-    <section>
-      <div className="container mx-auto px-10 items-center flex flex-col lg:flex-row">
+    <section className="section">
+      <div className="items-center flex flex-col lg:flex-row">
         <div className="lg:w-1/2">
           <div className="w-10/12 float-right">
             <h3 className="text-3xl font-semibold leading-tight">Share your Insights</h3>
@@ -153,7 +152,7 @@ export default ({ data }) => (
       </div>
     </section>
 
-    <section className="container mx-auto my-20 py-40 px-4 bg-gray-100 rounded-lg text-center">
+    <section className="section-box text-center">
       <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
       <p className="text-2xl mt-3 font-light">
         With no-code modeling and a simple, modern interface, all teams can now be data masters.

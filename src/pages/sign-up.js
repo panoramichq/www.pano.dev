@@ -4,9 +4,9 @@ import Recaptcha from 'react-recaptcha';
 
 export default () => (
   <Layout>
-    <section className="container mx-auto mt-4 p-4 lg:p-14 py-10 lg:py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
-      <div className="container text-center lg:text-left ">
-        <h1 className="text-7xl  font-semibold leading-none">Get instant access</h1>
+    <section className="section-hero">
+      <div className="container text-center lg:text-left">
+        <h1>Get instant access</h1>
         <p className="text-xl mt-10 font-ligh">
           Modernize your data stack and become a data master.
         </p>

@@ -1,8 +1,22 @@
 @tailwind base;
 
 @layer base {
+  h1 {
+    @apply text-4xl sm:text-6xl md:text-7xl font-semibold leading-none;
+  }
   a {
     @apply hover:text-black text-gray-600 transition duration-200;
+  }
+
+  .section-hero {
+    @apply container mx-auto mt-4 p-4 lg:p-14 py-10 lg:py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded;
+  }
+  .section {
+    @apply container mx-auto my-32 px-8;
+  }
+
+  .section-box {
+    @apply container mx-auto my-20 py-32 px-8 bg-gray-100 rounded-lg;
   }
 }
 @tailwind components;
