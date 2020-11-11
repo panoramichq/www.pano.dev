@@ -7,8 +7,8 @@ import Img from 'gatsby-image';
 
 export default ({ data }) => (
   <Layout>
-    <section className="section-hero relative overflow-hidden">
-      <div className="p-4 text-left lg:w-6/12 z-20">
+    <section className="flex flex-col lg:flex-row section-hero relative overflow-hidden ">
+      <div className="p-4 w-full lg:w-6/12 z-20 text-center lg:text-left">
         <h1>
           Data <br />
           transformation <br />
@@ -27,13 +27,13 @@ export default ({ data }) => (
           </ButtonLink>
         </div>
       </div>
-      <div className="hidden md:block z-10">
-        <div className="absolute w-1/2">
+      <div className="mt-10 lg:mt-0 w-full lg:w-1/2 flex justify-center">
+        <div className="flex w-full justify-center lg:mt-2 lg:absolute">
           <Img
             fluid={data.topImage.childImageSharp.fluid}
             objectFit="contain"
             alt="Overview of Pano platform"
-            className="w-full h-full"
+            className="w-full lg:w-1/2"
           />
         </div>
       </div>
@@ -91,7 +91,7 @@ export default ({ data }) => (
     <section className="section">
       <div className="items-center flex flex-col lg:flex-row">
         <div className="lg:w-1/2">
-          <div className="w-10/12 float-right">
+          <div className="lg:w-10/12 lg:float-right text-center lg:text-left">
             <h3 className="text-3xl font-semibold leading-tight">Prepare your Data</h3>
             <p className="mt-8 text-xl font-light leading-relaxed">
               Fix naming issues, apply custom groupings, remove duplicate records and clean your
@@ -104,12 +104,12 @@ export default ({ data }) => (
             </p>
           </div>
         </div>
-        <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
-          <div className="w-full mx-auto">
+        <div className="mt-10 lg:mt-0 w-full lg:w-1/2 flex justify-center">
+          <div className="flex w-full justify-center">
             <Img
               fluid={data.illustration1.childImageSharp.fluid}
               alt="Prepare your data"
-              className="w-10/12"
+              className="w-7/12 lg:w-10/12"
             />
           </div>
         </div>
@@ -118,17 +118,17 @@ export default ({ data }) => (
 
     <section className="section">
       <div className="items-center flex flex-col lg:flex-row">
-        <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
-          <div className="w-full justify-center">
+        <div className="mt-10 lg:mt-0 w-full lg:w-1/2 flex justify-center order-last lg:order-first">
+          <div className="flex w-full justify-center">
             <Img
               fluid={data.illustration2.childImageSharp.fluid}
               alt="Customize your model"
-              className="w-10/12"
+              className="w-7/12 lg:w-10/12"
             />
           </div>
         </div>
         <div className="lg:w-1/2">
-          <div className="w-10/12 float-left">
+          <div className="lg:w-10/12 lg:float-left text-center lg:text-left">
             <h3 className="text-3xl font-semibold leading-tight">Customize your Model</h3>
             <p className="mt-8 text-xl font-light leading-relaxed">
               Organize reports from all your partners into one unified data glossary to keep
@@ -147,7 +147,7 @@ export default ({ data }) => (
     <section className="section">
       <div className="items-center flex flex-col lg:flex-row">
         <div className="lg:w-1/2">
-          <div className="w-10/12 float-right">
+          <div className="lg:w-10/12 lg:float-right text-center lg:text-left">
             <h3 className="text-3xl font-semibold leading-tight">Share your Insights</h3>
             <p className="mt-8 text-xl font-light leading-relaxed">
               Invite teams to build their own reports with accurate metrics, contextual benchmarks
@@ -160,12 +160,12 @@ export default ({ data }) => (
             </p>
           </div>
         </div>
-        <div className="lg:mt-0 w-full lg:w-1/2 flex justify-center">
-          <div className="w-full justify-center">
+        <div className="mt-10 lg:mt-0 w-full lg:w-1/2 flex justify-center">
+          <div className="flex w-full justify-center">
             <Img
               fluid={data.illustration3.childImageSharp.fluid}
               alt="Share your insights"
-              className="w-10/12"
+              className="w-7/12 lg:w-10/12"
             />
           </div>
         </div>
