@@ -7,7 +7,7 @@ export default () => (
     <section className="section-hero">
       <div className="container text-center lg:text-left">
         <h1>Get instant access</h1>
-        <p className="text-xl mt-10 font-ligh">
+        <p className="lg:text-xl mt-10 font-ligh text-gray-800">
           Modernize your data stack and become a data master.
         </p>
 

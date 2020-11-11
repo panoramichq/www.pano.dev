@@ -34,36 +34,24 @@ export default ({ data }) => (
       </div>
     </section>
 
-    <section id="clients" className="section">
-      <h2 className="tracking-wider mb-10 text-gray-600 text-center">Trusted by great companies</h2>
-      <div className="mx-auto px-8 lg:flex justify-between items-center opacity-75">
-        <Img
-          fixed={data.sweetgreenLogo.childImageSharp.fixed}
-          alt="Sweetgreen"
-          className="w-40 h-full"
-        />
-        <Img
-          fixed={data.hanacureLogo.childImageSharp.fixed}
-          alt="Hanacure"
-          className="w-40 h-full"
-        />
-        <Img
-          fixed={data.blumhouseLogo.childImageSharp.fixed}
-          alt="Blumhouse"
-          className="w-40 h-full"
-        />
-        <Img fixed={data.sonyLogo.childImageSharp.fixed} alt="Sony" className="w-40 h-full" />
-        <Img
-          fixed={data.representLogo.childImageSharp.fixed}
-          alt="Represent"
-          className="w-40 h-full"
-        />
+    <section id="clients" className="container mx-auto my-40">
+      <h2 className="lg:text-xl mb-10 font-ligh text-gray-800 text-center">
+        Trusted by great companies
+      </h2>
+      <div className="mx-auto lg:px-8 flex justify-between flex-col sm:flex-row space-y-10 sm:space-y-0 items-center opacity-75">
+        <Img fixed={data.sweetgreenLogo.childImageSharp.fixed} alt="Sweetgreen" className="w-40" />
+        <Img fixed={data.hanacureLogo.childImageSharp.fixed} alt="Hanacure" className="w-40" />
+        <Img fixed={data.blumhouseLogo.childImageSharp.fixed} alt="Blumhouse" className="w-40" />
+        <Img fixed={data.sonyLogo.childImageSharp.fixed} alt="Sony" className="w-40" />
+        <Img fixed={data.representLogo.childImageSharp.fixed} alt="Represent" className="w-40" />
       </div>
     </section>
 
     <section className="section-box text-center">
-      <h2 className="text-4xl font-medium">Don't let valuable insights get lost in the backlog</h2>
-      <p className="text-2xl mt-3 font-light">
+      <h2 className="text-5xl font-semibold leading-none">
+        Don't let valuable insights get lost in the backlog
+      </h2>
+      <p className="text-2xl mt-10 font-light">
         With no-code modeling and a simple, modern interface, all teams can now be data masters.
       </p>
     </section>
@@ -153,9 +141,11 @@ export default ({ data }) => (
     </section>
 
     <section className="section-box text-center">
-      <h3 className="text-5xl font-semibold">Empower teams to make data driven decisions</h3>
-      <p className="text-2xl mt-3 font-light">
-        With no-code modeling and a simple, modern interface, all teams can now be data masters.
+      <h2 className="text-5xl font-semibold leading-none">
+        Empower teams to make data driven decisions
+      </h2>
+      <p className="text-2xl mt-10 font-light">
+        A data transformation tool for the modern data stack.
       </p>
       <Button size="lg" to="/sign-up" className="mt-10">
         Start exploring your data instantly

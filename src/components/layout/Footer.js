@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer className="container mx-auto py-16 mb-8 text-gray-800">
-      <div className="text-center sm:text-left sm:flex space-y-8 sm:space-y-0 sm:justify-between px-8">
+      <div className="text-center sm:text-left sm:flex space-y-8 sm:space-y-0 sm:justify-between px-16">
         <div>
           <h2 className="text-lg font-semibold">Contact us</h2>
           <p className="mt-4 leading-loose">
@@ -11,7 +11,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="space-y-8 sm:space-y-0 sm:flex sm:space-x-10">
+        <div className="space-y-8 sm:space-y-0 sm:flex sm:space-x-16">
           <div>
             <h2 className="text-lg font-semibold">Social</h2>
             <ul className="mt-4 leading-loose">

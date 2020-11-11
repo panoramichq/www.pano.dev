@@ -7,7 +7,7 @@ export default () => (
     <section className="section-hero">
       <div className="container text-center lg:text-left lg:w-7/12 ">
         <h1>Thank You for Signing Up!</h1>
-        <p className="text-xl mt-10 font-ligh">
+        <p className="lg:text-xl mt-10 font-ligh text-gray-800">
           You will receive an invitation email shortly. Get started with these helpful resources.
         </p>
         <div className="mt-12 mb-2 space-x-6">
