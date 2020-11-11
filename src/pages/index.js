@@ -27,12 +27,13 @@ export default ({ data }) => (
           </ButtonLink>
         </div>
       </div>
-      <div className="w-6/12 hidden md:block z-10">
+      <div className="hidden md:block z-10">
         <div className="absolute w-1/2">
           <Img
             fluid={data.topImage.childImageSharp.fluid}
-            objectFit="cover"
+            objectFit="contain"
             alt="Overview of Pano platform"
+            className="w-full h-full"
           />
         </div>
       </div>
@@ -79,10 +80,10 @@ export default ({ data }) => (
     </section>
 
     <section className="section-box text-center">
-      <h2 className="text-5xl font-semibold leading-none">
+      <h2 className="text-4xl md:text-5xl font-semibold leading-none">
         Don't let valuable insights get lost in the backlog
       </h2>
-      <p className="text-2xl mt-10 font-light">
+      <p className="text-xl md:text-2xl mt-10 font-light">
         With no-code modeling and a simple, modern interface, all teams can now be data masters.
       </p>
     </section>
@@ -172,10 +173,10 @@ export default ({ data }) => (
     </section>
 
     <section className="section-box text-center">
-      <h2 className="text-5xl font-semibold leading-none">
+      <h2 className="text-4xl md:text-5xl  font-semibold leading-none">
         Empower teams to make data driven decisions
       </h2>
-      <p className="text-2xl mt-10 font-light">
+      <p className="text-xl md:text-2xl mt-10 font-light">
         A data transformation tool for the modern data stack.
       </p>
       <Button size="lg" to="/sign-up" className="mt-10">

@@ -5,7 +5,7 @@ import Recaptcha from 'react-recaptcha';
 export default () => (
   <Layout>
     <section className="section-hero">
-      <div className="container text-center lg:text-left">
+      <div className="container text-left">
         <h1>Get instant access</h1>
         <p className="lg:text-xl mt-10 font-ligh text-gray-800">
           Modernize your data stack and become a data master.
@@ -26,7 +26,7 @@ export default () => (
             <input
               type="text"
               name="company"
-              className="border rounded block w-1/2 py-2 px-3 leading-tight mb-5"
+              className="border rounded block w-full md:w-1/2 py-2 px-3 leading-tight mb-5"
             ></input>
           </label>
 
@@ -35,7 +35,7 @@ export default () => (
             <input
               type="email"
               name="email"
-              className="border rounded block w-1/2 py-2 px-3 leading-tight mb-5"
+              className="border rounded block w-full md:w-1/2  py-2 px-3 leading-tight mb-5"
             ></input>
           </label>
 
