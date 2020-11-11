@@ -12,7 +12,7 @@ export default ({ data }) => (
         <h1>
           Data <br />
           transformation <br />
-          simplified.
+          simplified
         </h1>
         <p className="lg:text-xl mt-10 font-ligh text-gray-800">
           Bridge the gap between raw data and insights. The easy-to-use platform allows you to
