@@ -4,12 +4,12 @@ import { Link } from 'gatsby';
 
 export default function Header() {
   return (
-    <header className="bg-white z-30 w-full mt-4 top-0 sticky backdrop-blur bg-opacity-75">
+    <header className="bg-white z-50 w-full mt-4 top-0 sticky backdrop-blur bg-opacity-75">
       <nav className="container mx-auto flex justify-between py-4 px-8">
         <Link className="text-2xl" activeClassName="text-black" to="/">
           pano<span className="font-light">.dev</span>
         </Link>
-        <div className="space-x-8">
+        <div className="space-x-8 hidden sm:block">
           <a href="https://docs.pano.dev/" target="_blank" rel="noopener noreferrer">
             Docs
           </a>

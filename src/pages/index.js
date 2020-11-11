@@ -7,14 +7,14 @@ import Img from 'gatsby-image';
 
 export default ({ data }) => (
   <Layout>
-    <section className="container mx-auto mt-4 p-14 py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
-      <div className="text-center lg:text-left lg:w-6/12 ">
-        <h1 className="text-7xl font-semibold leading-none">
-          <div className="text-blue-600">Data</div>
-          <div className="text-blue-600">Transformation</div>
-          <div className="text-purple-600">Simplified</div>
+    <section className="container mx-auto mt-4 p-4 lg:p-14 py-10 lg:py-20 flex bg-gradient-to-br from-gray-50 to-gray-200 rounded relative overflow-hidden">
+      <div className="p-4 text-left lg:w-6/12 z-20">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold leading-none ">
+          Data <br />
+          transformation <br />
+          simplified.
         </h1>
-        <p className="text-xl mt-10 font-ligh">
+        <p className="lg:text-xl mt-10 font-ligh text-gray-800">
           Bridge the gap between raw data and valuable insights. The easy-to-use platform allows you
           to quickly map and transform data to fit your requirements.
         </p>
@@ -22,11 +22,14 @@ export default ({ data }) => (
           <Button size="lg" to="/sign-up">
             Sign up for free
           </Button>
-          <ButtonLink href="https://docs.pano.dev/">Learn more →</ButtonLink>
+
+          <ButtonLink className="hidden sm:inline-block" href="https://docs.pano.dev/">
+            Learn more →
+          </ButtonLink>
         </div>
       </div>
-      <div className="w-6/12">
-        <div className="absolute w-3/6">
+      <div className="w-6/12 hidden md:block z-10">
+        <div className="absolute w-1/2">
           <Img fluid={data.topImage.childImageSharp.fluid} alt="Overview of Pano platform" />
         </div>
       </div>
