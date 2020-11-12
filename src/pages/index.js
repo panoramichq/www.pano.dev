@@ -9,7 +9,7 @@ export default ({ data }) => (
   <Layout>
     <section className="flex flex-col lg:flex-row section-hero relative overflow-hidden ">
       <div className="p-4 w-full lg:w-6/12 z-20 text-center lg:text-left">
-        <h1>
+        <h1 className="background-clip-text text-transparent bg-gradient-to-br  to-blue-600 from-purple-600">
           Data <br />
           transformation <br />
           simplified
@@ -33,7 +33,7 @@ export default ({ data }) => (
             fluid={data.topImage.childImageSharp.fluid}
             objectFit="contain"
             alt="Overview of Pano platform"
-            className="w-full lg:w-1/2"
+            className="w-full md:w-5/6 lg:w-5/12"
           />
         </div>
       </div>

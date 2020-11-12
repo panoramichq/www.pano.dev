@@ -18,6 +18,10 @@
   .section-box {
     @apply container mx-auto my-10 lg:my-20 py-16 lg:py-32 px-8 bg-gray-100 rounded-lg;
   }
+
+  .background-clip-text {
+    -webkit-background-clip: text !important;
+  }
 }
 @tailwind components;
 
