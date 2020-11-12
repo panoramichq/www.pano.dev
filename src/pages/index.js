@@ -8,8 +8,8 @@ import Img from 'gatsby-image';
 export default ({ data }) => (
   <Layout>
     <section className="flex flex-col lg:flex-row section-hero relative overflow-hidden">
-      <div className="p-4 w-full lg:w-6/12  text-center z-20 lg:text-left">
-        <h1>
+      <div className="p-4 w-full lg:flex-1  text-center z-20 lg:text-left">
+        <h1 className="background-clip-text overflow-visible text-transparent bg-gradient-to-br to-blue-600 from-purple-600">
           Data <br />
           transformation <br />
           simplified
@@ -27,13 +27,13 @@ export default ({ data }) => (
           </ButtonLink>
         </div>
       </div>
-      <div className="mt-10 lg:mt-0 w-full lg:w-1/2 flex justify-center">
-        <div className="flex w-full justify-center lg:mt-2 z-10 lg:absolute">
+      <div className="mt-10 lg:mt-0 w-full lg:flex-2 flex justify-center items-center">
+        <div className="flex w-full lg:w-1/2 justify-center z-10 lg:absolute">
           <Img
             fluid={data.topImage.childImageSharp.fluid}
             objectFit="contain"
             alt="Overview of Pano platform"
-            className="w-full md:w-5/6 lg:w-1/2"
+            className="w-10/12 lg:w-full"
           />
         </div>
       </div>
