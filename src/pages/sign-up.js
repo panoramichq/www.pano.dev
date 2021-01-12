@@ -7,49 +7,53 @@ export default () => (
     <section className="section-hero">
       <div className="container text-left">
         <h1>Get instant access</h1>
+        // <p className="lg:text-xl mt-10 font-ligh text-gray-800">
+        //   Modernize your data stack and become a data master.
+        // </p>
+
         <p className="lg:text-xl mt-10 font-ligh text-gray-800">
-          Modernize your data stack and become a data master.
+          Sign up for Pano is closed. Reach out to us on <a href="https://slack.pano.dev/">Slack</a> if you have any questions.
         </p>
 
-        <form
-          name="signup"
-          method="POST"
-          data-netlify-recaptcha="true"
-          data-netlify="true"
-          className="mt-10"
-          action="/sign-up-complete"
-        >
-          <input type="hidden" name="form-name" value="signup" />
+        // <form
+        //   name="signup"
+        //   method="POST"
+        //   data-netlify-recaptcha="true"
+        //   data-netlify="true"
+        //   className="mt-10"
+        //   action="/sign-up-complete"
+        // >
+        //   <input type="hidden" name="form-name" value="signup" />
 
-          <label>
-            <span>Company name</span>
-            <input
-              type="text"
-              name="company"
-              className="border rounded block w-full md:w-1/2 py-2 px-3 leading-tight mb-5"
-            ></input>
-          </label>
+        //   <label>
+        //     <span>Company name</span>
+        //     <input
+        //       type="text"
+        //       name="company"
+        //       className="border rounded block w-full md:w-1/2 py-2 px-3 leading-tight mb-5"
+        //     ></input>
+        //   </label>
 
-          <label>
-            <span>Email</span>
-            <input
-              type="email"
-              name="email"
-              className="border rounded block w-full md:w-1/2  py-2 px-3 leading-tight mb-5"
-            ></input>
-          </label>
+        //   <label>
+        //     <span>Email</span>
+        //     <input
+        //       type="email"
+        //       name="email"
+        //       className="border rounded block w-full md:w-1/2  py-2 px-3 leading-tight mb-5"
+        //     ></input>
+        //   </label>
 
-          <div data-netlify-recaptcha="true" className="mb-5">
-            <Recaptcha sitekey="6LdczNoZAAAAACSNZqMZlY_FOGnICkE7_Aa_vDBd" badge="inline" />
-          </div>
+        //   <div data-netlify-recaptcha="true" className="mb-5">
+        //     <Recaptcha sitekey="6LdczNoZAAAAACSNZqMZlY_FOGnICkE7_Aa_vDBd" badge="inline" />
+        //   </div>
 
-          <button
-            className="py-3 px-6 rounded text-white bg-blue-600 hover:bg-blue-800 transition duration-200"
-            type="submit"
-          >
-            Sign up for free
-          </button>
-        </form>
+        //   <button
+        //     className="py-3 px-6 rounded text-white bg-blue-600 hover:bg-blue-800 transition duration-200"
+        //     type="submit"
+        //   >
+        //     Sign up for free
+        //   </button>
+        // </form>
       </div>
     </section>
   </Layout>
