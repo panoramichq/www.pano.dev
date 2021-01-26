@@ -16,7 +16,7 @@ export default function Footer() {
             <h2 className="text-lg font-semibold">Social</h2>
             <ul className="mt-4 leading-loose">
               <li>
-                <a href="https://slack.pano.dev">Slack Community →</a>
+                <a href="https://slack.pano.dev">Slack Community &#8594;</a>
               </li>
             </ul>
           </div>
@@ -25,13 +25,10 @@ export default function Footer() {
             <h2 className="text-lg font-semibold">Resources</h2>
             <ul className="mt-4 leading-loose">
               <li>
-                <a href="https://docs.pano.dev">Documentation →</a>
+                <a href="https://docs.pano.dev">Documentation &#8594;</a>
               </li>
               <li>
-                <a href="https://github.com/panoramichq/panoramic-cli">GitHub →</a>
-              </li>
-              <li>
-                <a href="https://www.panoramichq.com/privacy-policy">Privacy Policy</a>
+                <a href="https://github.com/panoramichq/panoramic-cli">GitHub &#8594;</a>
               </li>
             </ul>
           </div>

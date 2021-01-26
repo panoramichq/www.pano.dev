@@ -10,11 +10,7 @@ export default function Header() {
           pano<span className="font-light">.dev</span>
         </Link>
         <div className="space-x-8 hidden sm:block">
-          <a href="https://docs.pano.dev/" target="_blank" rel="noopener noreferrer">
-            Docs
-          </a>
-          <a href="https://platform.panoramichq.com">Log in</a>
-          <Button to="/sign-up">Sign up for free</Button>
+          <Button to="https://docs.pano.dev/">Get Started</Button>
         </div>
       </nav>
     </header>
