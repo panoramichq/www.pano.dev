@@ -23,3 +23,15 @@
     # Basic-Auth allows you to password protect your whole site.
     # This feature may not be available on all plans.
     #Basic-Auth = "pano:panoramic"
+
+[[redirects]]
+  from = "https://www.panoramichq.com/*"
+  to = "https://www.pano.dev"
+  status = 301
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "http://www.panoramichq.com/*"
+  to = "https://www.pano.dev"
+  status = 301
+  force = true # COMMENT: ensure that we always redirect
