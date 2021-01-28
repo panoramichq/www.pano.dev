@@ -25,6 +25,18 @@
     #Basic-Auth = "pano:panoramic"
 
 [[redirects]]
+  from = "https://panoramichq.com/*"
+  to = "https://www.pano.dev"
+  status = 301
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "http://panoramichq.com/*"
+  to = "https://www.pano.dev"
+  status = 301
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
   from = "https://www.panoramichq.com/*"
   to = "https://www.pano.dev"
   status = 301
